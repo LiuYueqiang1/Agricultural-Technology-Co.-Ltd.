@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大棚保温棉被 - 冬季防寒保温专用 | 耐用抗老化</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- 配置Tailwind自定义主题 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2E7D32', // 主色调：自然绿（体现农业属性）
+            secondary: '#F57C00', // 辅助色：暖橙（突出CTA按钮）
+            neutral: '#F5F5F5', // 中性色：浅灰（背景）
+            dark: '#333333' // 深色：文本
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .transition-custom {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-dark">
+  <!-- 导航栏 -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm transition-all duration-300" id="navbar">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center space-x-2">
+        <i class="fa fa-leaf text-primary text-2xl"></i>
+        <span class="font-bold text-lg md:text-xl text-primary">绿农保温材料</span>
+      </a>
+      
+      <!-- 桌面端导航 -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="/products.html" class="font-medium text-primary border-b-2 border-primary">产品中心</a>
+        <a href="/cases.html" class="font-medium hover:text-primary transition-custom">案例展示</a>
+        <a href="/about.html" class="font-medium hover:text-primary transition-custom">关于我们</a>
+        <a href="/contact.html" class="font-medium hover:text-primary transition-custom">联系咨询</a>
+      </nav>
+      
+      <!-- 联系电话 -->
+      <div class="hidden md:flex items-center space-x-1 text-gray-700">
+        <i class="fa fa-phone text-secondary"></i>
+        <span class="font-medium">400-123-4567</span>
+      </div>
+      
+      <!-- 移动端菜单按钮 -->
+      <button class="md:hidden text-gray-700 text-xl" id="menuBtn">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+    
+    <!-- 移动端导航菜单 -->
+    <div class="md:hidden bg-white shadow-md absolute w-full left-0 top-full transform -translate-y-full opacity-0 pointer-events-none transition-custom" id="mobileMenu">
+      <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+        <a href="/products.html" class="font-medium text-primary py-2 border-l-4 border-primary pl-2">产品中心</a>
+        <a href="/cases.html" class="font-medium hover:text-primary py-2 border-l-4 border-transparent hover:border-primary pl-2 transition-custom">案例展示</a>
+        <a href="/about.html" class="font-medium hover:text-primary py-2 border-l-4 border-transparent hover:border-primary pl-2 transition-custom">关于我们</a>
+        <a href="/contact.html" class="font-medium hover:text-primary py-2 border-l-4 border-transparent hover:border-primary pl-2 transition-custom">联系咨询</a>
+        <div class="flex items-center space-x-2 text-gray-700 pt-2 border-t border-gray-100">
+          <i class="fa fa-phone text-secondary"></i>
+          <span class="font-medium">400-123-4567</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 面包屑导航 -->
+  <div class="bg-neutral py-3">
+    <div class="container mx-auto px-4">
+      <div class="text-sm text-gray-600">
+        <a href="/" class="hover:text-primary">首页</a> 
+        <i class="fa fa-angle-right inline-block mx-2 text-gray-400"></i>
+        <a href="/products.html" class="hover:text-primary">产品中心</a>
+        <i class="fa fa-angle-right inline-block mx-2 text-gray-400"></i>
+        <span class="text-primary">大棚保温棉被</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主内容区 -->
+  <main class="container mx-auto px-4 py-8 md:py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+      <!-- 左侧：产品图片展示 -->
+      <div class="lg:col-span-1">
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+          <!-- 主图 -->
+          <div class="relative" id="mainImageContainer">
+            <img src="https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/6755faeb52174725969e2b8a8d0e0376.png~tplv-a9rns2rl98-24-95-exif:960:960.png?rcl=202509192153579E3F1D867AB209328D75&rk3s=8e244e95&rrcfp=8a172a1a&x-expires=1758894837&x-signature=%2F4bYV3%2FV2du%2B1UYYuerUXRy2JYU%3D" 
+                 alt="大棚保温棉被正面展示图" 
+                 class="w-full h-auto object-cover cursor-zoom-in" 
+                 id="mainImage">
+            <!-- 放大查看提示 -->
+            <div class="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded flex items-center">
+              <i class="fa fa-search-plus mr-1"></i> 点击放大
+            </div>
+          </div>
+          
+          <!-- 缩略图 -->
+          <div class="grid grid-cols-4 gap-2 p-4">
+            <div class="border-2 border-primary rounded overflow-hidden">
+              <img src="https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/6755faeb52174725969e2b8a8d0e0376.png~tplv-a9rns2rl98-24-95-exif:960:960.png?rcl=202509192153579E3F1D867AB209328D75&rk3s=8e244e95&rrcfp=8a172a1a&x-expires=1758894837&x-signature=%2F4bYV3%2FV2du%2B1UYYuerUXRy2JYU%3D" 
+                   alt="产品正面图" class="w-full h-20 object-cover cursor-pointer">
+            </div>
+            <div class="border-2 border-transparent hover:border-primary rounded overflow-hidden transition-custom">
+              <img src="https://picsum.photos/seed/quilt2/300/300" alt="产品材质细节图" class="w-full h-20 object-cover cursor-pointer">
+            </div>
+            <div class="border-2 border-transparent hover:border-primary rounded overflow-hidden transition-custom">
+              <img src="https://picsum.photos/seed/quilt3/300/300" alt="大棚覆盖效果图" class="w-full h-20 object-cover cursor-pointer">
+            </div>
+            <div class="border-2 border-transparent hover:border-primary rounded overflow-hidden transition-custom">
+              <img src="https://picsum.photos/seed/quilt4/300/300" alt="抗拉伸测试图" class="w-full h-20 object-cover cursor-pointer">
+            </div>
+          </div>
+        </div>
+        
+        <!-- 产品认证 -->
+        <div class="mt-6 bg-white rounded-lg shadow-sm p-4">
+          <h3 class="font-semibold text-lg mb-3 flex items-center">
+            <i class="fa fa-certificate text-secondary mr-2"></i> 品质认证
+          </h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div class="text-center p-2 border border-gray-100 rounded">
+              <i class="fa fa-check-circle text-primary text-xl mb-1"></i>
+              <p class="text-sm">ISO9001认证</p>
+            </div>
+            <div class="text-center p-2 border border-gray-100 rounded">
+              <i class="fa fa-check-circle text-primary text-xl mb-1"></i>
+              <p class="text-sm">农业用品检测合格</p>
+            </div>
+            <div class="text-center p-2 border border-gray-100 rounded">
+              <i class="fa fa-check-circle text-primary text-xl mb-1"></i>
+              <p class="text-sm">抗老化测试通过</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 中间：产品信息 -->
+      <div class="lg:col-span-1">
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <h1 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-dark mb-3">
+            新型防雨大棚保温棉被 冬季防寒抗冻
+          </h1>
+          
+          <!-- 产品评分 -->
+          <div class="flex items-center mb-4">
+            <div class="flex text-yellow-400 mr-2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <span class="text-gray-600 text-sm">4.8分 (126条评价)</span>
+          </div>
+          
+          <!-- 价格信息 -->
+          <div class="bg-neutral rounded-lg p-4 mb-6">
+            <div class="flex items-baseline mb-2">
+              <span class="text-3xl font-bold text-secondary">¥28.5</span>
+              <span class="text-gray-500 line-through ml-2">¥35.0</span>
+              <span class="bg-red-100 text-red-600 text-xs px-2 py-1 rounded ml-3">
+                立省18%
+              </span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              <i class="fa fa-truck mr-1"></i> 满2000元全国包邮 | 支持免费拿样（邮费到付）
+            </p>
+          </div>
+          
+          <!-- 产品特点 -->
+          <div class="mb-6">
+            <h3 class="font-semibold text-lg mb-3">核心优势</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                <span>多层复合结构，保温率提升30%，-15℃环境下棚内可保持10℃以上</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                <span>双面防水牛津布，抗雨雪侵蚀，使用寿命可达5-8年</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                <span>轻量化设计，降低大棚骨架负荷，适合各类棚型安装</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                <span>抗紫外线处理，夏季遮阳降温，四季可用</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- 规格选择 -->
+          <div class="mb-6">
+            <h3 class="font-semibold text-lg mb-3">选择规格</h3>
+            
+            <!-- 宽度选择 -->
+            <div class="mb-4">
+              <p class="text-gray-700 mb-2">宽度 (m)</p>
+              <div class="flex flex-wrap gap-2">
+                <button class="px-4 py-2 border border-primary bg-primary/10 text-primary rounded transition-custom">2.0</button>
+                <button class="px-4 py-2 border border-gray-300 hover:border-primary hover:text-primary rounded transition-custom">3.0</button>
+                <button class="px-4 py-2 border border-gray-300 hover:border-primary hover:text-primary rounded transition-custom">4.0</button>
+                <button class="px-4 py-2 border border-gray-300 hover:border-primary hover:text-primary rounded transition-custom">定制</button>
+              </div>
+            </div>
+            
+            <!-- 长度选择 -->
+            <div class="mb-4">
+              <p class="text-gray-700 mb-2">长度 (m)</p>
+              <div class="flex flex-wrap gap-2">
+                <button class="px-4 py-2 border border-primary bg-primary/10 text-primary rounded transition-custom">10</button>
+                <button class="px-4 py-2 border border-gray-300 hover:border-primary hover:text-primary rounded transition-custom">20</button>
+                <button class="px-4 py-2 border border-gray-300 hover:border-primary hover:text-primary rounded transition-custom">30</button>
+                <button class="px-4 py-2 border border-gray-300 hover:border-primary hover:text-primary rounded transition-custom">定制</button>
+              </div>
+            </div>
+            
+            <!-- 数量选择 -->
+            <div class="mb-6">
+              <p class="text-gray-700 mb-2">购买数量</p>
+              <div class="flex items-center w-36 border border-gray-300 rounded">
+                <button class="w-10 h-10 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-custom">-</button>
+                <input type="number" value="1" min="1" class="w-16 h-10 text-center border-x border-gray-300 focus:outline-none">
+                <button class="w-10 h-10 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-custom">+</button>
+              </div>
+              <p class="text-gray-500 text-sm mt-2">库存充足 (2358件)</p>
+            </div>
+          </div>
+          
+          <!-- 安装说明 -->
+          <div class="mb-6 p-4 border border-primary/20 bg-primary/5 rounded-lg">
+            <h3 class="font-medium flex items-center mb-2">
+              <i class="fa fa-info-circle text-primary mr-2"></i> 安装提示
+            </h3>
+            <p class="text-gray-700 text-sm">
+              产品含安装配件，支持全国上门安装（偏远地区需另加服务费），下单后48小时内安排技术人员对接
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 右侧：购买区域 & 咨询 -->
+      <div class="lg:col-span-1">
+        <!-- 固定购买栏（在桌面端固定定位） -->
+        <div class="bg-white rounded-lg shadow-md p-6 sticky top-24">
+          <div class="space-y-4">
+            <button class="w-full py-3 bg-secondary text-white rounded-lg font-medium text-lg flex items-center justify-center shadow-md hover:bg-secondary/90 transition-custom">
+              <i class="fa fa-shopping-cart mr-2"></i> 立即购买
+            </button>
+            
+            <button class="w-full py-3 bg-primary text-white rounded-lg font-medium text-lg flex items-center justify-center shadow-md hover:bg-primary/90 transition-custom">
+              <i class="fa fa-plus-circle mr-2"></i> 加入购物车
+            </button>
+            
+            <div class="flex gap-3">
+              <button class="flex-1 py-2 border border-gray-300 rounded-lg flex items-center justify-center text-gray-700 hover:border-primary hover:text-primary transition-custom">
+                <i class="fa fa-file-text-o mr-1"></i> 免费拿样
+              </button>
+              <button class="flex-1 py-2 border border-gray-300 rounded-lg flex items-center justify-center text-gray-700 hover:border-primary hover:text-primary transition-custom">
+                <i class="fa fa-heart-o mr-1"></i> 收藏
+              </button>
+            </div>
+          </div>
+          
+          <div class="border-t border-gray-200 my-6 pt-6">
+            <h3 class="font-semibold mb-4">在线咨询</h3>
+            
+            <div class="flex items-center space-x-3 mb-4">
+              <img src="https://picsum.photos/seed/consultant/60/60" alt="李经理" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <p class="font-medium">李经理 <span class="text-xs bg-green-100 text-green-600 px-1.5 py-0.5 rounded">在线</span></p>
+                <p class="text-xs text-gray-500">大棚保温方案顾问</p>
+              </div>
+            </div>
+            
+            <button class="w-full py-2 border border-primary text-primary rounded-lg flex items-center justify-center hover:bg-primary/5 transition-custom">
+              <i class="fa fa-comments-o mr-2"></i> 点击咨询
+            </button>
+            
+            <div class="mt-4 text-center">
+              <p class="text-gray-500 text-sm">或拨打热线</p>
+              <p class="text-xl font-bold text-primary mt-1">400-123-4567</p>
+              <p class="text-gray-500 text-xs mt-1">（周一至周日 8:00-20:00）</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 产品详情标签页 -->
+    <div class="mt-10 bg-white rounded-lg shadow-sm overflow-hidden">
+      <!-- 标签切换 -->
+      <div class="flex border-b border-gray-200">
+        <button class="px-6 py-4 font-medium text-primary border-b-2 border-primary">产品详情</button>
+        <button class="px-6 py-4 font-medium text-gray-500 hover:text-gray-700 transition-custom">规格参数</button>
+        <button class="px-6 py-4 font-medium text-gray-500 hover:text-gray-700 transition-custom">安装教程</button>
+        <button class="px-6 py-4 font-medium text-gray-500 hover:text-gray-700 transition-custom">用户评价</button>
+      </div>
+      
+      <!-- 标签内容：产品详情 -->
+      <div class="p-6 md:p-8">
+        <!-- 产品细节图 -->
+        <div class="mb-10">
+          <h3 class="text-xl font-semibold mb-6 text-center">产品细节展示</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <img src="https://picsum.photos/seed/detail1/600/400" alt="保温棉被分层结构展示" class="w-full h-auto rounded shadow-sm">
+              <p class="text-center mt-3 text-gray-700">多层复合结构，保温性能更强</p>
+            </div>
+            <div>
+              <img src="https://picsum.photos/seed/detail2/600/400" alt="防水测试展示" class="w-full h-auto rounded shadow-sm">
+              <p class="text-center mt-3 text-gray-700">双面防水设计，雨天无需额外覆盖</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 产品参数 -->
+        <div class="mb-10">
+          <h3 class="text-xl font-semibold mb-6">技术参数</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse">
+              <thead>
+                <tr class="bg-gray-50">
+                  <th class="border border-gray-200 px-4 py-3 text-left">参数项</th>
+                  <th class="border border-gray-200 px-4 py-3 text-left">数值</th>
+                  <th class="border border-gray-200 px-4 py-3 text-left">参数项</th>
+                  <th class="border border-gray-200 px-4 py-3 text-left">数值</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-200 px-4 py-3">材质</td>
+                  <td class="border border-gray-200 px-4 py-3">牛津布+珍珠棉+防水膜</td>
+                  <td class="border border-gray-200 px-4 py-3">厚度</td>
+                  <td class="border border-gray-200 px-4 py-3">8-15mm（可定制）</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="border border-gray-200 px-4 py-3">保温率</td>
+                  <td class="border border-gray-200 px-4 py-3">≥85%</td>
+                  <td class="border border-gray-200 px-4 py-3">耐温范围</td>
+                  <td class="border border-gray-200 px-4 py-3">-40℃~70℃</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-200 px-4 py-3">抗张力</td>
+                  <td class="border border-gray-200 px-4 py-3">≥300N/5cm</td>
+                  <td class="border border-gray-200 px-4 py-3">使用寿命</td>
+                  <td class="border border-gray-200 px-4 py-3">5-8年</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <!-- 应用场景 -->
+        <div class="mb-10">
+          <h3 class="text-xl font-semibold mb-6">适用场景</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="border border-gray-100 rounded-lg p-4 text-center hover:shadow-md transition-custom">
+              <i class="fa fa-leaf text-primary text-3xl mb-3"></i>
+              <h4 class="font-medium mb-1">蔬菜大棚</h4>
+              <p class="text-sm text-gray-600">冬季蔬菜种植保温</p>
+            </div>
+            <div class="border border-gray-100 rounded-lg p-4 text-center hover:shadow-md transition-custom">
+              <i class="fa fa-apple text-primary text-3xl mb-3"></i>
+              <h4 class="font-medium mb-1">果树大棚</h4>
+              <p class="text-sm text-gray-600">果树越冬防寒</p>
+            </div>
+            <div class="border border-gray-100 rounded-lg p-4 text-center hover:shadow-md transition-custom">
+              <i class="fa fa-pagelines text-primary text-3xl mb-3"></i>
+              <h4 class="font-medium mb-1">花卉大棚</h4>
+              <p class="text-sm text-gray-600">花卉育苗保温</p>
+            </div>
+            <div class="border border-gray-100 rounded-lg p-4 text-center hover:shadow-md transition-custom">
+              <i class="fa fa-snowflake-o text-primary text-3xl mb-3"></i>
+              <h4 class="font-medium mb-1">育苗基地</h4>
+              <p class="text-sm text-gray-600">幼苗防冻保护</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 用户案例 -->
+        <div>
+          <h3 class="text-xl font-semibold mb-6">客户使用案例</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-custom">
+              <img src="https://picsum.photos/seed/case1/400/300" alt="山东蔬菜大棚案例" class="w-full h-48 object-cover">
+              <div class="p-4">
+                <h4 class="font-medium mb-1">山东·蔬菜种植基地</h4>
+                <p class="text-sm text-gray-600 mb-2">覆盖面积5000㎡，冬季温度提升12℃</p>
+                <span class="text-xs bg-green-100 text-green-600 px-2 py-0.5 rounded">已使用3年</span>
+              </div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-custom">
+              <img src="https://picsum.photos/seed/case2/400/300" alt="河南花卉大棚案例" class="w-full h-48 object-cover">
+              <div class="p-4">
+                <h4 class="font-medium mb-1">河南·花卉培育中心</h4>
+                <p class="text-sm text-gray-600 mb-2">定制款保温被，花期提前15天</p>
+                <span class="text-xs bg-green-100 text-green-600 px-2 py-0.5 rounded">已使用2年</span>
+              </div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-custom">
+              <img src="https://picsum.photos/seed/case3/400/300" alt="辽宁果树大棚案例" class="w-full h-48 object-cover">
+              <div class="p-4">
+                <h4 class="font-medium mb-1">辽宁·果树种植园</h4>
+                <p class="text-sm text-gray-600 mb-2">抗寒型棉被，-20℃正常使用</p>
+                <span class="text-xs bg-green-100 text-green-600 px-2 py-0.5 rounded">已使用1年</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 相关推荐 -->
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold mb-6 flex items-center">
+        <i class="fa fa-th-large text-primary mr-2"></i> 相关推荐
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 推荐产品1 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-custom">
+          <div class="relative">
+            <img src="https://picsum.photos/seed/rel1/400/300" alt="加厚型大棚保温棉被" class="w-full h-48 object-cover">
+            <span class="absolute top-2 right-2 bg-secondary text-white text-xs px-2 py-1 rounded">热销</span>
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium mb-2 line-clamp-2">加厚型大棚保温棉被 抗寒-25℃</h3>
+            <div class="flex text-yellow-400 text-xs mb-2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p class="text-secondary font-bold">¥35.8 <span class="text-gray-400 line-through text-sm ml-1">¥42.0</span></p>
+          </div>
+        </div>
+        
+        <!-- 推荐产品2-4（结构同上） -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-custom">
+          <img src="https://picsum.photos/seed/rel2/400/300" alt="轻型大棚保温被" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-medium mb-2 line-clamp-2">轻型大棚保温被 适合拱形棚</h3>
+            <div class="flex text-yellow-400 text-xs mb-2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p class="text-secondary font-bold">¥22.5 <span class="text-gray-400 line-through text-sm ml-1">¥28.0</span></p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-custom">
+          <img src="https://picsum.photos/seed/rel3/400/300" alt="大棚保温被配件" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-medium mb-2 line-clamp-2">大棚保温被专用固定配件 全套</h3>
+            <div class="flex text-yellow-400 text-xs mb-2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p class="text-secondary font-bold">¥58.0 <span class="text-gray-400 line-through text-sm ml-1">¥65.0</span></p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-custom">
+          <img src="https://picsum.photos/seed/rel4/400/300" alt="电动卷被机" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-medium mb-2 line-clamp-2">电动卷被机 大棚保温被配套设备</h3>
+            <div class="flex text-yellow-400 text-xs mb-2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p class="text-secondary font-bold">¥1280 <span class="text-gray-400 line-through text-sm ml-1">¥1580</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 底部悬浮购买栏（仅在移动端显示） -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-40">
+    <div class="flex items-center">
+      <button class="w-1/5 py-4 flex flex-col items-center justify-center text-gray-600 border-r border-gray-200">
+        <i class="fa fa-phone text-xl mb-1"></i>
+        <span class="text-xs">电话</span>
+      </button>
+      <button class="w-1/5 py-4 flex flex-col items-center justify-center text-gray-600 border-r border-gray-200">
+        <i class="fa fa-comments-o text-xl mb-1"></i>
+        <span class="text-xs">咨询</span>
+      </button>
+      <button class="w-1/5 py-4 flex flex-col items-center justify-center text-gray-600 border-r border-gray-200">
+        <i class="fa fa-file-text-o text-xl mb-1"></i>
+        <span class="text-xs">拿样</span>
+      </button>
+      <button class="w-2/5 py-4 bg-secondary text-white font-medium flex items-center justify-center">
+        <i class="fa fa-shopping-cart mr-2"></i> 立即购买
+      </button>
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="bg-dark text-white pt-12 pb-6 mt-20 lg:mt-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <h3 class="text-lg font-bold mb-4 flex items-center">
+            <i class="fa fa-leaf text-secondary mr-2"></i> 绿农保温材料
+          </h3>
+          <p class="text-gray-400 text-sm mb-4">
+            专注大棚保温材料研发生产15年，为全国2000+农业基地提供保温解决方案
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-custom"><i class="fa fa-weixin text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-custom"><i class="fa fa-weibo text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-custom"><i class="fa fa-youtube-play text-xl"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-bold mb-4">快速链接</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white transition-custom">关于我们</a></li>
+            <li><a href="#" class="hover:text-white transition-custom">产品中心</a></li>
+            <li><a href="#" class="hover:text-white transition-custom">案例展示</a></li>
+            <li><a href="#" class="hover:text-white transition-custom">技术支持</a></li>
+            <li><a href="#" class="hover:text-white transition-custom">联系我们</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-bold mb-4">产品系列</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white transition-custom">大棚保温棉被</a></li>
+            <li><a href="#" class="hover:text-white transition-custom">防火保温被</a></li>
+            <li><a href="#" class="hover:text-white transition-custom">轻型保温被</a></li>
+            <li><a href="#" class="hover:text-white transition-custom">卷被机设备</a></li>
+            <li><a href="#" class="hover:text-white transition-custom">定制保温方案</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-bold mb-4">联系我们</h3>
+          <ul class="space-y-3 text-gray-400">
+            <li class="flex items-start">
+              <i class="fa fa-map-marker text-secondary mt-1 mr-3"></i>
+              <span>河北省廊坊市XX工业园区保温材料产业园8号</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-phone text-secondary mr-3"></i>
+              <span>400-123-4567</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-envelope text-secondary mr-3"></i>
+              <span>info@lvnong.com</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-clock-o text-secondary mr-3"></i>
+              <span>8:00-20:00（全年无休）</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+        <p>© 2023 绿农保温材料有限公司 版权所有 | 冀ICP备XXXXXXXX号</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 图片放大模态框 -->
+  <div class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-custom" id="imageModal">
+    <button class="absolute top-4 right-4 text-white text-3xl" id="closeModal">
+      <i class="fa fa-times"></i>
+    </button>
+    <img src="" alt="放大查看" class="max-w-[90%] max-h-[90vh]" id="modalImage">
+  </div>
+
+  <script>
+    // 导航栏滚动效果
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('py-2', 'shadow');
+        navbar.classList.remove('py-3', 'shadow-sm');
+      } else {
+        navbar.classList.add('py-3', 'shadow-sm');
+        navbar.classList.remove('py-2', 'shadow');
+      }
+    });
+    
+    // 移动端菜单切换
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    menuBtn.addEventListener('click', function() {
+      if (mobileMenu.classList.contains('opacity-0')) {
+        mobileMenu.classList.remove('opacity-0', '-translate-y-full', 'pointer-events-none');
+        mobileMenu.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        menuBtn.innerHTML = '<i class="fa fa-times"></i>';
+      } else {
+        mobileMenu.classList.add('opacity-0', '-translate-y-full', 'pointer-events-none');
+        mobileMenu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        menuBtn.innerHTML = '<i class="fa fa-bars"></i>';
+      }
+    });
+    
+    // 图片放大功能
+    const mainImage = document.getElementById('mainImage');
+    const modalImage = document.getElementById('modalImage');
+    const imageModal = document.getElementById('imageModal');
+    const closeModal = document.getElementById('closeModal');
+    
+    mainImage.addEventListener('click', function() {
+      modalImage.src = this.src;
+      imageModal.classList.remove('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = 'hidden';
+    });
+    
+    closeModal.addEventListener('click', function() {
+      imageModal.classList.add('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = 'auto';
+    });
+    
+    // 点击模态框背景关闭
+    imageModal.addEventListener('click', function(e) {
+      if (e.target === this) {
+        imageModal.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = 'auto';
+      }
+    });
+    
+    // 缩略图切换主图
+    const thumbnails = document.querySelectorAll('.grid-cols-4 img');
+    thumbnails.forEach(thumb => {
+      thumb.addEventListener('click', function() {
+        // 更新主图
+        mainImage.src = this.src;
+        mainImage.alt = this.alt;
+        
+        // 更新缩略图边框
+        document.querySelectorAll('.grid-cols-4 div').forEach(el => {
+          el.classList.remove('border-primary');
+          el.classList.add('border-transparent', 'hover:border-primary');
+        });
+        this.parentElement.classList.remove('border-transparent', 'hover:border-primary');
+        this.parentElement.classList.add('border-primary');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Claude Code 本地配置（不纳入版本库）
+.claude/
+.DS_Store
+node_modules/

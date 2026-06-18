@@ -1,676 +1,552 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>绿农科技 - 专业蔬菜大棚保温棉被供应商</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script>
-        // 配置Tailwind自定义颜色和字体
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2E7D32', // 主绿色
-                        secondary: '#1976D2', // 辅助蓝色
-                        accent: '#8D6E63', // 点缀色
-                        neutral: '#F5F5F5', // 背景色
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .text-shadow {
-                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            }
-            .card-hover {
-                transition: all 0.3s ease;
-            }
-            .card-hover:hover {
-                transform: translateY(-5px);
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>document.documentElement.className += " js";</script>
+  <title>鑫源鼎丰农业科技有限公司 | 蔬菜大棚保温棉被生产厂家</title>
+  <meta name="description" content="鑫源鼎丰农业科技有限公司，位于山东省青州市何官镇，专业从事蔬菜大棚保温棉被的研发、生产与销售。保温隔寒、坚固耐用、厂家直供、按需定制。Greenhouse thermal insulation quilt manufacturer in Qingzhou, Shandong, China." />
+  <meta name="keywords" content="保温棉被,大棚保温被,蔬菜大棚,温室保温,青州保温棉被厂家,greenhouse insulation quilt,thermal blanket" />
+  <meta name="theme-color" content="#15663c" />
+  <meta property="og:title" content="鑫源鼎丰农业科技有限公司 | 蔬菜大棚保温棉被生产厂家" />
+  <meta property="og:description" content="专业蔬菜大棚保温棉被研发与生产，保温隔寒、坚固耐用、厂家直供、按需定制。" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="font-sans text-gray-800 bg-white">
-    <!-- 导航栏 -->
-    <header id="navbar" class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
-                    <i class="fa fa-leaf text-white text-xl"></i>
-                </div>
-                <span class="text-xl font-bold text-primary">绿农科技</span>
-            </a>
-            
-            <!-- 桌面导航 -->
-            <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-700 hover:text-primary transition-colors">首页</a>
-                <a href="#about" class="text-gray-700 hover:text-primary transition-colors">公司介绍</a>
-                <a href="#business" class="text-gray-700 hover:text-primary transition-colors">业务介绍</a>
-                <a href="#products" class="text-gray-700 hover:text-primary transition-colors">产品展示</a>
-                <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">联系方式</a>
-            </nav>
-            
-            <!-- 移动端菜单按钮 -->
-            <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
-                <i class="fa fa-bars text-xl"></i>
-            </button>
-        </div>
-        
-        <!-- 移动端导航菜单 -->
-        <div id="mobileMenu" class="md:hidden hidden bg-white border-t">
-            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
-                <a href="#home" class="text-gray-700 hover:text-primary py-2 transition-colors">首页</a>
-                <a href="#about" class="text-gray-700 hover:text-primary py-2 transition-colors">公司介绍</a>
-                <a href="#business" class="text-gray-700 hover:text-primary py-2 transition-colors">业务介绍</a>
-                <a href="#products" class="text-gray-700 hover:text-primary py-2 transition-colors">产品展示</a>
-                <a href="#contact" class="text-gray-700 hover:text-primary py-2 transition-colors">联系方式</a>
-            </div>
-        </div>
-    </header>
+<body>
 
-    <!-- 首页横幅 -->
-    <section id="home" class="pt-24 md:pt-0 min-h-screen flex items-center bg-gradient-to-br from-neutral to-white">
-        <div class="container mx-auto px-4 py-16 md:py-24">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-gray-800 leading-tight mb-4">
-                        专业蔬菜大棚<br>
-                        <span class="text-primary">保温棉被解决方案</span>
-                    </h1>
-                    <p class="text-lg text-gray-600 mb-8 max-w-lg">
-                        结合现代农业科技，为您的大棚提供高效保温、耐用抗寒的专业棉被，助力农作物增产增收。
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#products" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md transition-all shadow-md hover:shadow-lg">
-                            查看产品
-                        </a>
-                        <a href="#contact" class="bg-white border border-primary text-primary hover:bg-primary/5 px-6 py-3 rounded-md transition-all">
-                            联系我们
-                        </a>
-                    </div>
-                </div>
-                <div class="md:w-1/2">
-                    <div class="relative">
-                        <img src="https://picsum.photos/id/130/800/600" alt="蔬菜大棚保温棉被应用场景" class="rounded-lg shadow-xl w-full h-auto object-cover">
-                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
-                            <div class="flex items-center space-x-2">
-                                <i class="fa fa-check-circle text-primary text-xl"></i>
-                                <span class="font-medium">保温效果提升30%</span>
-                            </div>
-                        </div>
-                        <div class="absolute -top-6 -right-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
-                            <div class="flex items-center space-x-2">
-                                <i class="fa fa-check-circle text-primary text-xl"></i>
-                                <span class="font-medium">使用寿命长达5年以上</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ============ 顶部导航 ============ -->
+  <header class="header">
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="鑫源鼎丰农业科技有限公司">
+        <svg class="brand__logo" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2e9e5b" />
+              <stop offset="1" stop-color="#15663c" />
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)" />
+          <path d="M11 33 V24 C11 16.8 16.8 11 24 11 C31.2 11 37 16.8 37 24 V33" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" />
+          <path d="M10 33 H38" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" />
+          <path d="M24 33 V22" stroke="#cdeed6" stroke-width="2" stroke-linecap="round" />
+          <path d="M24 26 C24 22.5 21 21 18.5 21.2 C18.6 24.4 21 26 24 26 Z" fill="#f0a340" />
+          <path d="M24 23 C24 19.6 27 18 29.5 18.3 C29.4 21.5 27 23.2 24 23 Z" fill="#ffd79b" />
+        </svg>
+        <span class="brand__text">
+          <span class="brand__cn">鑫源鼎丰农业科技</span>
+          <span class="brand__en">Xinyuan Dingfeng Agri-Tech</span>
+        </span>
+      </a>
 
-    <!-- 公司介绍 -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-gray-800 mb-4">关于我们</h2>
-                <div class="w-20 h-1 bg-primary mx-auto"></div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <img src="https://picsum.photos/id/287/600/400" alt="公司厂区环境" class="rounded-lg shadow-lg w-full h-auto">
-                </div>
-                <div class="md:w-1/2">
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800">绿农农业科技有限公司</h3>
-                    <p class="text-gray-600 mb-4">
-                        绿农科技成立于2010年，是一家专注于农业大棚保温材料研发、生产和销售的高新技术企业。我们致力于为现代农业提供高效、环保、耐用的保温解决方案。
-                    </p>
-                    <p class="text-gray-600 mb-6">
-                        多年来，我们与多家农业科研机构合作，不断改进产品技术，目前已形成完整的大棚保温棉被产品线，广泛应用于各类蔬菜、水果、花卉等温室种植领域。
-                    </p>
-                    
-                    <div class="grid grid-cols-2 gap-6 mt-8">
-                        <div class="flex flex-col items-center text-center p-4 bg-neutral rounded-lg">
-                            <i class="fa fa-certificate text-primary text-3xl mb-3"></i>
-                            <h4 class="font-bold mb-1">专业认证</h4>
-                            <p class="text-sm text-gray-600">多项技术专利</p>
-                        </div>
-                        <div class="flex flex-col items-center text-center p-4 bg-neutral rounded-lg">
-                            <i class="fa fa-users text-primary text-3xl mb-3"></i>
-                            <h4 class="font-bold mb-1">专业团队</h4>
-                            <p class="text-sm text-gray-600">农业专家顾问</p>
-                        </div>
-                        <div class="flex flex-col items-center text-center p-4 bg-neutral rounded-lg">
-                            <i class="fa fa-truck text-primary text-3xl mb-3"></i>
-                            <h4 class="font-bold mb-1">全国配送</h4>
-                            <p class="text-sm text-gray-600">快速响应服务</p>
-                        </div>
-                        <div class="flex flex-col items-center text-center p-4 bg-neutral rounded-lg">
-                            <i class="fa fa-comments text-primary text-3xl mb-3"></i>
-                            <h4 class="font-bold mb-1">售后保障</h4>
-                            <p class="text-sm text-gray-600">全程技术支持</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <nav class="nav__links" aria-label="主导航">
+        <a href="#home" data-i18n="nav.home">首页</a>
+        <a href="#about" data-i18n="nav.about">公司介绍</a>
+        <a href="#business" data-i18n="nav.business">业务介绍</a>
+        <a href="#products" data-i18n="nav.products">产品展示</a>
+        <a href="#contact" data-i18n="nav.contact">联系我们</a>
+      </nav>
 
-    <!-- 业务介绍 -->
-    <section id="business" class="py-20 bg-neutral">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-gray-800 mb-4">我们的业务</h2>
-                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    我们专注于大棚保温棉被的研发、生产和销售，为现代农业种植提供全方位的保温解决方案
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://picsum.photos/id/119/600/400" alt="保温棉被生产" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-gray-800">保温棉被生产</h3>
-                        <p class="text-gray-600 mb-4">
-                            采用优质原材料和先进生产工艺，生产多种规格的大棚保温棉被，满足不同地区和作物的需求。
-                        </p>
-                        <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-start">
-                                <i class="fa fa-check text-primary mt-1 mr-2"></i>
-                                <span>多层复合结构，保温效果好</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa fa-check text-primary mt-1 mr-2"></i>
-                                <span>抗老化、抗紫外线处理</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa fa-check text-primary mt-1 mr-2"></i>
-                                <span>防水防潮，适应各种环境</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://picsum.photos/id/123/600/400" alt="定制化解决方案" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-gray-800">定制化解决方案</h3>
-                        <p class="text-gray-600 mb-4">
-                            根据客户的大棚尺寸、种植作物和地域气候特点，提供个性化的保温棉被解决方案。
-                        </p>
-                        <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-start">
-                                <i class="fa fa-check text-primary mt-1 mr-2"></i>
-                                <span>一对一专业咨询</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa fa-check text-primary mt-1 mr-2"></i>
-                                <span>针对性方案设计</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa fa-check text-primary mt-1 mr-2"></i>
-                                <span>全程技术指导</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://picsum.photos/id/133/600/400" alt="配套安装服务" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-gray-800">配套安装服务</h3>
-                        <p class="text-gray-600 mb-4">
-                            提供保温棉被的安装调试服务，确保产品发挥最佳效果，同时提供使用培训和维护指导。
-                        </p>
-                        <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-start">
-                                <i class="fa fa-check text-primary mt-1 mr-2"></i>
-                                <span>专业团队上门安装</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa fa-check text-primary mt-1 mr-2"></i>
-                                <span>操作使用培训</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa fa-check text-primary mt-1 mr-2"></i>
-                                <span>定期维护建议</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <div class="nav__actions">
+        <div class="lang-toggle" role="group" aria-label="语言切换 / Language">
+          <button data-lang="zh" type="button">中文</button>
+          <button data-lang="en" type="button">EN</button>
         </div>
-    </section>
-
-    <!-- 产品展示 -->
-    <section id="products" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-gray-800 mb-4">产品展示</h2>
-                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    我们提供多种类型的大棚保温棉被，满足不同场景和需求，所有产品均经过严格质量检测
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- 产品1 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden group card-hover">
-                    <div class="h-56 overflow-hidden bg-neutral">
-                        <img src="https://picsum.photos/id/137/400/300" alt="标准型大棚保温棉被" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold mb-2 text-gray-800">标准型保温棉被</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            适用于一般大棚使用，保温性能优良，性价比高
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <a href="product-1.html" class="text-primary font-medium hover:underline">咨询报价</a>
-                            <i class="fa fa-arrow-right text-gray-500 hover:text-primary transition-colors"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 产品2 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden group card-hover">
-                    <div class="h-56 overflow-hidden bg-neutral">
-                        <img src="https://picsum.photos/id/142/400/300" alt="加厚型大棚保温棉被" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold mb-2 text-gray-800">加厚型保温棉被</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            适用于寒冷地区，保温效果更佳，抗寒性能强
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-primary font-medium">咨询报价</span>
-                            <button class="text-gray-500 hover:text-primary transition-colors">
-                                <i class="fa fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 产品3 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden group card-hover">
-                    <div class="h-56 overflow-hidden bg-neutral">
-                        <img src="https://picsum.photos/id/152/400/300" alt="防水型大棚保温棉被" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold mb-2 text-gray-800">防水型保温棉被</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            表面特殊防水处理，适合多雨多雪地区使用
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-primary font-medium">咨询报价</span>
-                            <button class="text-gray-500 hover:text-primary transition-colors">
-                                <i class="fa fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 产品4 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden group card-hover">
-                    <div class="h-56 overflow-hidden bg-neutral">
-                        <img src="https://picsum.photos/id/155/400/300" alt="智能温控大棚保温棉被" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold mb-2 text-gray-800">智能温控保温棉被</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            可与智能控制系统联动，自动调节覆盖状态
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-primary font-medium">咨询报价</span>
-                            <button class="text-gray-500 hover:text-primary transition-colors">
-                                <i class="fa fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="#contact" class="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md transition-all shadow-md hover:shadow-lg">
-                    了解更多产品 <i class="fa fa-long-arrow-right ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 留言系统和联系方式 -->
-    <section id="contact" class="py-20 bg-neutral">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-gray-800 mb-4">联系我们</h2>
-                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    无论您有任何疑问或需求，都可以通过以下方式联系我们，我们将尽快为您提供专业的服务
-                </p>
-            </div>
-            
-            <div class="flex flex-col lg:flex-row gap-12">
-                <div class="lg:w-1/2">
-                    <div class="bg-white p-8 rounded-lg shadow-md h-full">
-                        <h3 class="text-2xl font-bold mb-6 text-gray-800">留言咨询</h3>
-                        <form id="contactForm" class="space-y-6">
-                            <div>
-                                <label for="name" class="block text-gray-700 mb-2">姓名</label>
-                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" placeholder="请输入您的姓名" required>
-                            </div>
-                            <div>
-                                <label for="phone" class="block text-gray-700 mb-2">电话</label>
-                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" placeholder="请输入您的联系电话" required>
-                            </div>
-                            <div>
-                                <label for="email" class="block text-gray-700 mb-2">邮箱</label>
-                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" placeholder="请输入您的邮箱地址">
-                            </div>
-                            <div>
-                                <label for="message" class="block text-gray-700 mb-2">留言内容</label>
-                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" placeholder="请输入您的咨询内容" required></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md transition-all shadow-md hover:shadow-lg">
-                                提交留言
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="lg:w-1/2">
-                    <div class="bg-white p-8 rounded-lg shadow-md mb-8">
-                        <h3 class="text-2xl font-bold mb-6 text-gray-800">联系方式</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 flex-shrink-0">
-                                    <i class="fa fa-map-marker text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800 mb-1">公司地址</h4>
-                                    <p class="text-gray-600">山东省青州市何官镇</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 flex-shrink-0">
-                                    <i class="fa fa-phone text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800 mb-1">联系电话</h4>
-                                    <p class="text-gray-600">153-0536-5338</p>
-                                    <p class="text-gray-600">183-5365-8373</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 flex-shrink-0">
-                                    <i class="fa fa-envelope text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800 mb-1">电子邮箱</h4>
-                                    <p class="text-gray-600">info@lunnongkeji.com</p>
-                                    <p class="text-gray-600">sales@lunnongkeji.com</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 flex-shrink-0">
-                                    <i class="fa fa-clock-o text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800 mb-1">工作时间</h4>
-                                    <p class="text-gray-600">周一至周五: 8:00 - 18:00</p>
-                                    <p class="text-gray-600">周六: 9:00 - 16:00 (节假日除外)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white p-8 rounded-lg shadow-md">
-                        <h3 class="text-2xl font-bold mb-6 text-gray-800">关注我们</h3>
-                        <div class="flex space-x-4">
-                            <a href="#" class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
-                                <i class="fa fa-weixin text-xl"></i>
-                            </a>
-                            <a href="#" class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
-                                <i class="fa fa-weibo text-xl"></i>
-                            </a>
-                            <a href="#" class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
-                                <i class="fa fa-qq text-xl"></i>
-                            </a>
-                            <a href="#" class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
-                                <i class="fa fa-youtube-play text-xl"></i>
-                            </a>
-                        </div>
-                        <div class="mt-6">
-                            <img src="https://picsum.photos/id/201/150/150" alt="微信公众号二维码" class="w-36 h-36 object-cover rounded-md">
-                            <p class="text-sm text-gray-600 mt-2">微信公众号二维码</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 页脚 -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-white rounded-md flex items-center justify-center">
-                            <i class="fa fa-leaf text-primary text-xl"></i>
-                        </div>
-                        <span class="text-xl font-bold">绿农科技</span>
-                    </div>
-                    <p class="text-gray-400 mb-4">
-                        专业大棚保温棉被供应商，为现代农业保驾护航
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fa fa-weixin"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fa fa-weibo"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fa fa-qq"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-4">快速链接</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">公司介绍</a></li>
-                        <li><a href="#business" class="text-gray-400 hover:text-white transition-colors">业务介绍</a></li>
-                        <li><a href="#products" class="text-gray-400 hover:text-white transition-colors">产品展示</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">联系方式</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-4">产品系列</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">标准型保温棉被</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">加厚型保温棉被</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">防水型保温棉被</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">智能温控保温棉被</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">定制化产品</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-4">联系我们</h4>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <i class="fa fa-map-marker text-gray-400 mt-1 mr-2"></i>
-                            <span class="text-gray-400">山东省青州市何官镇</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-phone text-gray-400 mt-1 mr-2"></i>
-                            <span class="text-gray-400">15305365338</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-envelope text-gray-400 mt-1 mr-2"></i>
-                            <span class="text-gray-400">info@lunnongkeji.com</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
-                <p>© 2023 绿农农业科技有限公司 版权所有 | 冀ICP备12345678号</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- 返回顶部按钮 -->
-    <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
-        <i class="fa fa-arrow-up"></i>
-    </button>
-
-    <!-- 成功提交提示 -->
-    <div id="successModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 opacity-0 invisible transition-all duration-300">
-        <div class="bg-white rounded-lg p-8 max-w-md w-full transform scale-95 transition-transform duration-300">
-            <div class="text-center">
-                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fa fa-check text-2xl text-green-500"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2">提交成功</h3>
-                <p class="text-gray-600 mb-6">您的留言已成功提交，我们将尽快与您联系</p>
-                <button id="closeModal" class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-md transition-colors">
-                    确定
-                </button>
-            </div>
-        </div>
+        <a href="#contact" class="btn btn--primary" style="padding:9px 18px" data-i18n="nav.cta">获取报价</a>
+        <button class="nav__burger" type="button" aria-label="菜单">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
     </div>
+  </header>
 
-    <script>
-        // 移动端菜单切换
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            const icon = menuBtn.querySelector('i');
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            }
-        });
-        
-        // 导航栏滚动效果
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('py-2', 'shadow');
-                navbar.classList.remove('py-3');
-            } else {
-                navbar.classList.add('py-3');
-                navbar.classList.remove('py-2', 'shadow');
-            }
-        });
-        
-        // 返回顶部按钮
-        const backToTopBtn = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.remove('opacity-0', 'invisible');
-                backToTopBtn.classList.add('opacity-100', 'visible');
-            } else {
-                backToTopBtn.classList.add('opacity-0', 'invisible');
-                backToTopBtn.classList.remove('opacity-100', 'visible');
-            }
-        });
-        
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // 平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // 关闭移动菜单（如果打开）
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                    const icon = menuBtn.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // 表单提交处理
-        const contactForm = document.getElementById('contactForm');
-        const successModal = document.getElementById('successModal');
-        const closeModal = document.getElementById('closeModal');
-        
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // 模拟表单提交
-            setTimeout(() => {
-                // 显示成功提示
-                successModal.classList.remove('opacity-0', 'invisible');
-                successModal.classList.add('opacity-100', 'visible');
-                successModal.querySelector('div').classList.remove('scale-95');
-                successModal.querySelector('div').classList.add('scale-100');
-                
-                // 重置表单
-                contactForm.reset();
-            }, 500);
-        });
-        
-        closeModal.addEventListener('click', () => {
-            successModal.classList.add('opacity-0', 'invisible');
-            successModal.classList.remove('opacity-100', 'visible');
-            successModal.querySelector('div').classList.add('scale-95');
-            successModal.querySelector('div').classList.remove('scale-100');
-        });
-        
-        // 点击模态框外部关闭
-        successModal.addEventListener('click', (e) => {
-            if (e.target === successModal) {
-                closeModal.click();
-            }
-        });
-    </script>
+  <!-- 移动端菜单 -->
+  <div class="mobile-panel">
+    <a href="#home" data-i18n="nav.home">首页</a>
+    <a href="#about" data-i18n="nav.about">公司介绍</a>
+    <a href="#business" data-i18n="nav.business">业务介绍</a>
+    <a href="#products" data-i18n="nav.products">产品展示</a>
+    <a href="#contact" data-i18n="nav.contact">联系我们</a>
+  </div>
+
+  <!-- ============ Hero ============ -->
+  <section class="hero" id="home">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <span class="hero__badge"><span class="dot"></span><span data-i18n="hero.badge">山东青州 · 大棚保温棉被厂家直供</span></span>
+        <h1 data-i18n-html="hero.title">专业蔬菜大棚<br><span class="warm">保温棉被</span><span class="accent">解决方案</span></h1>
+        <p class="hero__lead" data-i18n="hero.lead">我们专注于温室大棚保温棉被的研发与生产，保温隔寒、坚固耐用，助力农作物安全越冬、稳产增收。</p>
+        <div class="hero__cta">
+          <a href="#products" class="btn btn--primary">
+            <span data-i18n="hero.cta1">查看产品</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#contact" class="btn btn--ghost" data-i18n="hero.cta2">联系我们</a>
+        </div>
+        <a href="tel:15305365338" class="hero__call">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span><span data-i18n="hero.callPrefix">或致电咨询：</span><strong>153 0536 5338</strong></span>
+        </a>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <div class="num" data-i18n="hero.stat1n">厂家直供</div>
+            <div class="label" data-i18n="hero.stat1l">源头工厂 无中间商</div>
+          </div>
+          <div class="hero__stat">
+            <div class="num" data-i18n="hero.stat2n">按需定制</div>
+            <div class="label" data-i18n="hero.stat2l">尺寸 · 厚度 · 幅宽</div>
+          </div>
+          <div class="hero__stat">
+            <div class="num" data-i18n="hero.stat3n">5年+</div>
+            <div class="label" data-i18n="hero.stat3l">坚固耐用 抗老化</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__art">
+        <!-- 大棚 + 保温棉被 插画 -->
+        <svg viewBox="0 0 520 460" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="蔬菜大棚保温棉被示意图">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#eaf5ee" />
+              <stop offset="1" stop-color="#fbf1e2" />
+            </linearGradient>
+            <linearGradient id="quiltG" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2e9e5b" />
+              <stop offset="1" stop-color="#15663c" />
+            </linearGradient>
+            <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffffff" stop-opacity=".95" />
+              <stop offset="1" stop-color="#d6ecdd" stop-opacity=".75" />
+            </linearGradient>
+          </defs>
+
+          <rect x="0" y="0" width="520" height="460" rx="28" fill="url(#sky)" />
+          <!-- 太阳 -->
+          <circle cx="406" cy="96" r="54" fill="#f0a340" opacity=".18" />
+          <circle cx="406" cy="96" r="34" fill="#f0a340" />
+          <!-- 远山/地面 -->
+          <path d="M0 372 Q160 340 300 372 T520 360 V460 H0 Z" fill="#d6ecdd" />
+          <path d="M0 400 Q200 372 360 402 T520 392 V460 H0 Z" fill="#bfe3ca" />
+
+          <!-- 大棚主体（玻璃/棚膜） -->
+          <path d="M70 372 V236 C70 168 132 120 214 120 C296 120 358 168 358 236 V372 Z" fill="url(#glass)" stroke="#1b7a47" stroke-width="3" />
+          <!-- 棚内竖向骨架 -->
+          <path d="M126 372 V150" stroke="#9cd3ad" stroke-width="2" />
+          <path d="M214 372 V120" stroke="#9cd3ad" stroke-width="2" />
+          <path d="M302 372 V150" stroke="#9cd3ad" stroke-width="2" />
+
+          <!-- 棚内幼苗 -->
+          <g stroke="#1b7a47" stroke-width="3" stroke-linecap="round">
+            <path d="M150 372 V332" /><path d="M150 344 q-12 -6 -16 -18" /><path d="M150 350 q12 -4 18 -16" />
+            <path d="M214 372 V324" /><path d="M214 338 q-12 -6 -16 -18" /><path d="M214 344 q12 -4 18 -16" />
+            <path d="M278 372 V332" /><path d="M278 344 q-12 -6 -16 -18" /><path d="M278 350 q12 -4 18 -16" />
+          </g>
+
+          <!-- 覆盖在棚上的保温棉被（已掀开一半） -->
+          <path d="M214 120 C296 120 358 168 358 236 V300 L214 256 Z" fill="url(#quiltG)" />
+          <!-- 被子绗缝纹路 -->
+          <g stroke="#0f3d24" stroke-opacity=".28" stroke-width="2">
+            <path d="M236 138 L262 230" /><path d="M268 132 L300 236" /><path d="M300 142 L330 244" />
+            <path d="M236 168 L356 200" /><path d="M224 196 L356 232" /><path d="M222 224 L348 268" />
+          </g>
+
+          <!-- 卷起的棉被卷轴 -->
+          <g>
+            <ellipse cx="214" cy="120" rx="20" ry="20" fill="#1b7a47" />
+            <ellipse cx="214" cy="120" rx="20" ry="20" fill="none" stroke="#0f3d24" stroke-opacity=".3" stroke-width="2" />
+            <circle cx="214" cy="120" r="7" fill="#2e9e5b" />
+            <rect x="150" y="110" width="64" height="20" rx="10" fill="#2e9e5b" />
+            <path d="M158 120 H206 M158 114 H206 M158 126 H206" stroke="#0f3d24" stroke-opacity=".22" stroke-width="1.6" />
+          </g>
+
+          <!-- 温度标识 -->
+          <g transform="translate(96 196)">
+            <rect x="-6" y="-22" width="56" height="40" rx="12" fill="#ffffff" />
+            <path d="M8 -2 a6 6 0 1 0 8 0 V-12 a4 4 0 0 0 -8 0 Z" fill="#e08a2b" />
+            <path d="M28 -14 h12 M28 -8 h8 M28 -2 h12" stroke="#e08a2b" stroke-width="2.4" stroke-linecap="round" />
+          </g>
+        </svg>
+
+        <div class="hero__chip hero__chip--1">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1b7a47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span data-i18n="hero.chip1">保温性能优异</span>
+        </div>
+        <div class="hero__chip hero__chip--2">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#e08a2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <span data-i18n="hero.chip2">坚固耐用</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 优势条 ============ -->
+  <section class="features">
+    <div class="container features__grid">
+      <div class="feature reveal">
+        <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V5a2 2 0 0 0-4 0v9.76a4 4 0 1 0 4 0z"/></svg></div>
+        <h3 data-i18n="feat1.t">保温隔寒</h3>
+        <p data-i18n="feat1.d">多层复合结构，有效锁住棚内温度，抵御严寒。</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-5.5 7-12a7 7 0 1 0-14 0c0 6.5 7 12 7 12z"/><path d="M9 12a3 3 0 0 0 6 0"/></svg></div>
+        <h3 data-i18n="feat2.t">防水抗老化</h3>
+        <p data-i18n="feat2.d">表面防水处理，抗紫外线、耐风吹日晒。</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l6-3v3l5-3v16M9 12h.01M9 16h.01M13 12h.01M13 16h.01"/></svg></div>
+        <h3 data-i18n="feat3.t">厂家直供</h3>
+        <p data-i18n="feat3.d">自有生产，省去中间环节，价格更实在。</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg></div>
+        <h3 data-i18n="feat4.t">按需定制</h3>
+        <p data-i18n="feat4.d">按大棚尺寸、气候定制规格、厚度与幅宽。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 公司介绍 ============ -->
+  <section class="section" id="about">
+    <div class="container about__grid">
+      <div class="about__media reveal">
+        <div class="frame">
+          <!-- 生产/仓储示意（建议替换为真实厂区或产品照片） -->
+          <svg viewBox="0 0 600 450" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="保温棉被生产示意图">
+            <rect width="600" height="450" fill="#eaf5ee" />
+            <rect x="0" y="300" width="600" height="150" fill="#d6ecdd" />
+            <!-- 堆叠的棉被卷 -->
+            <g>
+              <rect x="70" y="250" width="150" height="60" rx="14" fill="#2e9e5b" /><circle cx="100" cy="280" r="20" fill="#15663c" /><circle cx="100" cy="280" r="8" fill="#9cd3ad" />
+              <rect x="90" y="190" width="150" height="60" rx="14" fill="#1b7a47" /><circle cx="120" cy="220" r="20" fill="#0f3d24" /><circle cx="120" cy="220" r="8" fill="#2e9e5b" />
+              <rect x="70" y="130" width="150" height="60" rx="14" fill="#2e9e5b" /><circle cx="100" cy="160" r="20" fill="#15663c" /><circle cx="100" cy="160" r="8" fill="#9cd3ad" />
+            </g>
+            <g>
+              <rect x="360" y="250" width="160" height="60" rx="14" fill="#e08a2b" /><circle cx="492" cy="280" r="20" fill="#c5731f" /><circle cx="492" cy="280" r="8" fill="#ffd79b" />
+              <rect x="380" y="190" width="160" height="60" rx="14" fill="#f0a340" /><circle cx="512" cy="220" r="20" fill="#c5731f" /><circle cx="512" cy="220" r="8" fill="#ffd79b" />
+            </g>
+            <!-- 厂房轮廓 -->
+            <path d="M40 130 V70 H560 V130" stroke="#1b7a47" stroke-width="3" opacity=".5" />
+            <path d="M40 70 L300 30 L560 70" stroke="#1b7a47" stroke-width="3" fill="none" opacity=".5" />
+          </svg>
+        </div>
+        <div class="stamp">
+          <div class="big" data-i18n="about.stampBig">源头工厂</div>
+          <div class="small" data-i18n="about.stampSmall">厂家直供 品质保障</div>
+        </div>
+      </div>
+
+      <div class="about__body reveal">
+        <span class="eyebrow" data-i18n="about.eyebrow">关于我们</span>
+        <h2 data-i18n="about.title">扎根青州，专注大棚保温棉被</h2>
+        <p data-i18n="about.p1">鑫源鼎丰农业科技有限公司位于山东省青州市何官镇，是一家专注于蔬菜大棚保温棉被研发、生产与销售的农业科技企业。</p>
+        <p data-i18n="about.p2">我们采用优质原材料与成熟生产工艺，为蔬菜、瓜果、花卉等温室大棚提供保温隔寒方案，帮助农户降低能耗、稳定棚温、保障作物安全越冬。</p>
+        <div class="about__points">
+          <div class="about__point">
+            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <span><b data-i18n="about.point1t">优质材料</b><span data-i18n="about.point1d">精选保温填充与面料</span></span>
+          </div>
+          <div class="about__point">
+            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <span><b data-i18n="about.point2t">工艺成熟</b><span data-i18n="about.point2d">规范化生产流程</span></span>
+          </div>
+          <div class="about__point">
+            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <span><b data-i18n="about.point3t">厂家直销</b><span data-i18n="about.point3d">源头价格更实惠</span></span>
+          </div>
+          <div class="about__point">
+            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <span><b data-i18n="about.point4t">贴心服务</b><span data-i18n="about.point4d">咨询 · 定制 · 配送 · 售后</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 业务介绍 ============ -->
+  <section class="section section--tint" id="business">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="biz.eyebrow">业务介绍</span>
+        <h2 class="section-title" data-i18n="biz.title">从生产到售后的一站式保温方案</h2>
+        <p class="section-sub" data-i18n="biz.sub">围绕大棚保温棉被，我们提供生产制造、定制方案与配送服务的完整链条。</p>
+      </div>
+      <div class="biz__grid">
+        <div class="biz-card reveal">
+          <div class="biz-card__ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l6 3V8l6 3V8l2-1v14M9 21v-4h2v4"/></svg></div>
+          <h3 data-i18n="biz1.t">保温棉被生产</h3>
+          <p data-i18n="biz1.d">多规格大棚保温棉被批量生产，质量稳定可靠。</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="biz1.l1">多层复合，保温性好</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="biz1.l2">防水防潮面料</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="biz1.l3">抗老化、抗紫外线</span></li>
+          </ul>
+        </div>
+        <div class="biz-card reveal">
+          <div class="biz-card__ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg></div>
+          <h3 data-i18n="biz2.t">定制化方案</h3>
+          <p data-i18n="biz2.d">按大棚尺寸、作物与气候定制专属保温方案。</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="biz2.l1">尺寸、幅宽定制</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="biz2.l2">厚度、克重可选</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="biz2.l3">专业选型建议</span></li>
+          </ul>
+        </div>
+        <div class="biz-card reveal">
+          <div class="biz-card__ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7M5.5 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM18.5 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg></div>
+          <h3 data-i18n="biz3.t">配送与服务</h3>
+          <p data-i18n="biz3.d">全国配送，提供使用与维护指导，售后无忧。</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="biz3.l1">全国物流配送</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="biz3.l2">使用与维护指导</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="biz3.l3">售后及时响应</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 产品展示 ============ -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="prod.eyebrow">产品展示</span>
+        <h2 class="section-title" data-i18n="prod.title">多种规格 满足不同大棚需求</h2>
+        <p class="section-sub" data-i18n="prod.sub">以下为常见产品类型，具体规格、厚度与幅宽均可按需定制，欢迎来电咨询。</p>
+      </div>
+      <div class="products__grid">
+
+        <!-- 产品1 -->
+        <div class="product reveal">
+          <div class="product__media">
+            <span class="product__tag" data-i18n="prod1.tag">常用款</span>
+            <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="400" height="300" fill="#eaf5ee"/>
+              <rect x="60" y="150" width="280" height="90" rx="18" fill="#2e9e5b"/>
+              <ellipse cx="90" cy="195" rx="30" ry="45" fill="#15663c"/><ellipse cx="90" cy="195" rx="12" ry="18" fill="#9cd3ad"/>
+              <g stroke="#0f3d24" stroke-opacity=".25" stroke-width="3"><path d="M150 155 V235"/><path d="M210 155 V235"/><path d="M270 155 V235"/><path d="M120 195 H340"/></g>
+            </svg>
+          </div>
+          <div class="product__body">
+            <h3 data-i18n="prod1.t">标准型保温棉被</h3>
+            <p data-i18n="prod1.d">适用于常规蔬菜大棚，保温稳定，性价比高。</p>
+            <div class="product__specs"><span data-i18n="prod1.s1">多层复合</span><span data-i18n="prod1.s2">防潮</span><span data-i18n="prod1.s3">性价比高</span></div>
+            <a href="#contact" class="product__cta"><span data-i18n="prod.cta">电话咨询</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+
+        <!-- 产品2 -->
+        <div class="product reveal">
+          <div class="product__media">
+            <span class="product__tag" data-i18n="prod2.tag">抗严寒</span>
+            <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="400" height="300" fill="#e9f3ec"/>
+              <rect x="55" y="140" width="290" height="110" rx="20" fill="#15663c"/>
+              <ellipse cx="88" cy="195" rx="32" ry="55" fill="#0f3d24"/><ellipse cx="88" cy="195" rx="13" ry="22" fill="#2e9e5b"/>
+              <g stroke="#0f3d24" stroke-opacity=".3" stroke-width="3"><path d="M150 145 V245"/><path d="M210 145 V245"/><path d="M270 145 V245"/><path d="M120 180 H340"/><path d="M120 210 H340"/></g>
+              <g stroke="#bfe3ca" stroke-width="2.5" stroke-linecap="round"><path d="M300 70 v34 M283 87 h34 M289 76 l22 22 M311 76 l-22 22"/></g>
+            </svg>
+          </div>
+          <div class="product__body">
+            <h3 data-i18n="prod2.t">加厚防寒型</h3>
+            <p data-i18n="prod2.d">加厚加密设计，适合北方寒冷地区与严冬使用。</p>
+            <div class="product__specs"><span data-i18n="prod2.s1">加厚</span><span data-i18n="prod2.s2">高保温</span><span data-i18n="prod2.s3">抗严寒</span></div>
+            <a href="#contact" class="product__cta"><span data-i18n="prod.cta">电话咨询</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+
+        <!-- 产品3 -->
+        <div class="product reveal">
+          <div class="product__media">
+            <span class="product__tag" data-i18n="prod3.tag">防水款</span>
+            <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="400" height="300" fill="#eaf5ee"/>
+              <rect x="60" y="150" width="280" height="90" rx="18" fill="#1b7a47"/>
+              <ellipse cx="90" cy="195" rx="30" ry="45" fill="#0f3d24"/><ellipse cx="90" cy="195" rx="12" ry="18" fill="#2e9e5b"/>
+              <g stroke="#cdeed6" stroke-opacity=".5" stroke-width="3"><path d="M150 155 V235"/><path d="M210 155 V235"/><path d="M270 155 V235"/><path d="M120 195 H340"/></g>
+              <g fill="#e08a2b"><path d="M250 80 c0 14 -10 20 -10 30 a10 10 0 0 0 20 0 c0 -10 -10 -16 -10 -30z"/><path d="M295 100 c0 10 -7 14 -7 21 a7 7 0 0 0 14 0 c0 -7 -7 -11 -7 -21z" opacity=".7"/></g>
+            </svg>
+          </div>
+          <div class="product__body">
+            <h3 data-i18n="prod3.t">防水牛津布面被</h3>
+            <p data-i18n="prod3.d">牛津布面料，防水耐磨，适合多雨多雪地区。</p>
+            <div class="product__specs"><span data-i18n="prod3.s1">牛津布面</span><span data-i18n="prod3.s2">防水</span><span data-i18n="prod3.s3">耐磨</span></div>
+            <a href="#contact" class="product__cta"><span data-i18n="prod.cta">电话咨询</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+
+        <!-- 产品4 -->
+        <div class="product reveal">
+          <div class="product__media">
+            <span class="product__tag" data-i18n="prod4.tag">可定制</span>
+            <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="400" height="300" fill="#fbf1e2"/>
+              <rect x="60" y="150" width="280" height="90" rx="18" fill="#2e9e5b"/>
+              <ellipse cx="90" cy="195" rx="30" ry="45" fill="#15663c"/><ellipse cx="90" cy="195" rx="12" ry="18" fill="#9cd3ad"/>
+              <g stroke="#0f3d24" stroke-opacity=".25" stroke-width="3"><path d="M150 155 V235"/><path d="M210 155 V235"/><path d="M270 155 V235"/></g>
+              <g stroke="#e08a2b" stroke-width="3" stroke-linecap="round"><path d="M60 120 H340"/><path d="M60 112 V128 M130 114 V126 M200 112 V128 M270 114 V126 M340 112 V128"/></g>
+            </svg>
+          </div>
+          <div class="product__body">
+            <h3 data-i18n="prod4.t">定制规格棉被</h3>
+            <p data-i18n="prod4.d">按大棚实际尺寸与需求，定制专属保温棉被。</p>
+            <div class="product__specs"><span data-i18n="prod4.s1">尺寸定制</span><span data-i18n="prod4.s2">厚度可选</span><span data-i18n="prod4.s3">幅宽可选</span></div>
+            <a href="#contact" class="product__cta"><span data-i18n="prod.cta">电话咨询</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 为什么选择我们 ============ -->
+  <section class="section why">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="why.eyebrow">为什么选择我们</span>
+        <h2 class="section-title" data-i18n="why.title">让每一座大棚都温暖过冬</h2>
+        <p class="section-sub" data-i18n="why.sub">用稳定的品质与务实的服务，赢得农户与合作社的信任。</p>
+      </div>
+      <div class="why__grid">
+        <div class="why-item reveal">
+          <div class="why-item__n">01</div>
+          <h3 data-i18n="why1.t">源头工厂 价格实在</h3>
+          <p data-i18n="why1.d">自有生产、厂家直供，省去中间环节，让利客户。</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-item__n">02</div>
+          <h3 data-i18n="why2.t">品质把控 用着放心</h3>
+          <p data-i18n="why2.d">严选材料、规范生产，保温与耐用兼顾。</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-item__n">03</div>
+          <h3 data-i18n="why3.t">按需定制 贴心服务</h3>
+          <p data-i18n="why3.d">从选型到售后，提供专业建议与及时响应。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 联系我们 ============ -->
+  <section class="section section--warm" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="contact.eyebrow">联系我们</span>
+        <h2 class="section-title" data-i18n="contact.title">获取报价与选型建议</h2>
+        <p class="section-sub" data-i18n="contact.sub">大棚保温有任何需求，欢迎随时来电或留言，我们会尽快与您联系。</p>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <div class="contact-card contact-card--phone">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div><div class="label" data-i18n="contact.phoneLabel">联系电话</div><a class="value" href="tel:15305365338">153 0536 5338</a></div>
+            <a href="tel:15305365338" class="call-now">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span data-i18n="contact.callNow">立即拨打</span>
+            </a>
+          </div>
+          <div class="contact-card">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+            <div><div class="label" data-i18n="contact.emailLabel">电子邮箱</div><a class="value" href="mailto:lyq15684175732@163.com">lyq15684175732@163.com</a></div>
+          </div>
+          <div class="contact-card">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div>
+              <div class="label" data-i18n="contact.addrLabel">公司地址</div>
+              <a class="value" href="https://www.amap.com/search?query=%E9%9D%92%E5%B7%9E%E5%B8%82%E4%BD%95%E5%AE%98%E9%95%87" target="_blank" rel="noopener" style="font-size:1rem" data-i18n="contact.addrValue">山东省青州市何官镇</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <div><div class="label" data-i18n="contact.hoursLabel">营业时间</div><div class="value" style="font-size:1rem" data-i18n="contact.hoursValue">周一至周日 8:00 - 18:00</div></div>
+          </div>
+        </div>
+
+        <div class="contact__formwrap reveal">
+          <div class="contact__form">
+            <h3 data-i18n="form.title">在线留言</h3>
+            <p class="hint" data-i18n="form.hint">填写下方表单并提交，我们会第一时间收到并尽快与您联系。</p>
+            <div class="contact__iframe-box">
+              <iframe src="https://qqeiilgv.jsjform.com/f/wqNKlF?embedded=true" title="在线留言表单" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 页脚 ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="brand">
+            <svg class="brand__logo" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <rect x="2" y="2" width="44" height="44" rx="13" fill="#1b7a47" />
+              <path d="M11 33 V24 C11 16.8 16.8 11 24 11 C31.2 11 37 16.8 37 24 V33" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" />
+              <path d="M10 33 H38" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" />
+              <path d="M24 26 C24 22.5 21 21 18.5 21.2 C18.6 24.4 21 26 24 26 Z" fill="#f0a340" />
+              <path d="M24 23 C24 19.6 27 18 29.5 18.3 C29.4 21.5 27 23.2 24 23 Z" fill="#ffd79b" />
+            </svg>
+            <span class="brand__text">
+              <span class="brand__cn">鑫源鼎丰农业科技</span>
+              <span class="brand__en">Xinyuan Dingfeng Agri-Tech</span>
+            </span>
+          </div>
+          <p class="footer__about" data-i18n="footer.about">专业蔬菜大棚保温棉被生产厂家，保温隔寒、坚固耐用，助力农作物安全越冬。</p>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.navTitle">快速导航</h4>
+          <ul class="footer__links">
+            <li><a href="#home" data-i18n="nav.home">首页</a></li>
+            <li><a href="#about" data-i18n="nav.about">公司介绍</a></li>
+            <li><a href="#business" data-i18n="nav.business">业务介绍</a></li>
+            <li><a href="#products" data-i18n="nav.products">产品展示</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">联系我们</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.prodTitle">产品系列</h4>
+          <ul class="footer__links">
+            <li><a href="#products" data-i18n="prod1.t">标准型保温棉被</a></li>
+            <li><a href="#products" data-i18n="prod2.t">加厚防寒型</a></li>
+            <li><a href="#products" data-i18n="prod3.t">防水牛津布面被</a></li>
+            <li><a href="#products" data-i18n="prod4.t">定制规格棉被</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.contactTitle">联系我们</h4>
+          <ul class="footer__contact">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="contact.addrValue">山东省青州市何官镇</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:15305365338">153 0536 5338</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:lyq15684175732@163.com">lyq15684175732@163.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© <span id="year">2026</span> <span data-i18n="footer.copyright">鑫源鼎丰农业科技有限公司 · 版权所有</span></span>
+        <span data-i18n="footer.icp">ICP 备案号：待备案</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 悬浮一键拨号 -->
+  <a href="tel:15305365338" class="call-fab" aria-label="电话咨询 153 0536 5338">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span data-i18n="fab.call">电话咨询</span>
+  </a>
+
+  <!-- 返回顶部 -->
+  <button class="to-top" type="button" aria-label="返回顶部">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

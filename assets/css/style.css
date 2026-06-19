@@ -205,11 +205,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   z-index: 0;
 }
 .hero__grid {
-  position: relative;
-  z-index: 1;
   display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap: 56px;
+  grid-template-columns: 1fr 1.4fr; /* 调整这个比例即可 */
+  gap: 48px;
   align-items: center;
 }
 .hero__badge {

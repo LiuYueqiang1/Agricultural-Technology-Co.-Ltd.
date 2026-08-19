@@ -14,7 +14,7 @@
   <link rel="alternate" hreflang="en" href="en.html">
   <link rel="alternate" hreflang="x-default" href="index.html">
   <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
-  <link rel="preload" href="assets/img/First_photo2_clean.png" as="image" type="image/png" fetchpriority="high">
+  <link rel="preload" href="assets/img/First_photo2_clean.webp" as="image" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/style.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -70,7 +70,7 @@
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <img class="hero__image" src="assets/img/First_photo2_clean.png" alt="Greenhouses covered with black thermal quilts in a winter landscape" width="1829" height="860">
+      <img class="hero__image" src="assets/img/First_photo2_clean.webp" alt="Greenhouses covered with black thermal quilts in a winter landscape" width="1829" height="860">
       <div class="hero__shade"></div>
       <div class="shell hero__inner">
         <div class="hero__copy reveal">
@@ -108,7 +108,7 @@
     <section class="factory section-pad" id="factory" aria-labelledby="factory-title">
       <div class="shell factory__grid">
         <div class="factory__media reveal">
-          <img src="assets/img/factory.jpg" alt="Reference view of greenhouse thermal quilt production" width="1200" height="675" loading="lazy">
+          <img src="assets/img/factory.webp" alt="Reference view of greenhouse thermal quilt production" width="1200" height="675" loading="lazy">
           <p class="media-note">Reference image of greenhouse quilt production</p>
         </div>
         <div class="factory__body reveal">
@@ -152,7 +152,7 @@
           </ul>
         </div>
         <figure class="product__media reveal">
-          <img src="assets/img/product1.jpg" alt="Rolled black thermal quilts for agricultural greenhouses" width="1200" height="675" loading="lazy">
+          <img src="assets/img/product1.webp" alt="Rolled black thermal quilts for agricultural greenhouses" width="1200" height="675" loading="lazy">
           <figcaption>Rolled product display · Current availability depends on the production schedule</figcaption>
         </figure>
       </div>
@@ -181,26 +181,95 @@
       <div class="shell">
         <div class="section-heading reveal">
           <div>
-            <p class="eyebrow"><span></span>APPLICATION</p>
-            <h2 id="application-title">Built for Northern Greenhouse Conditions</h2>
+            <p class="eyebrow"><span></span>GALLERY</p>
+            <h2 id="application-title">Product, Loading &amp; Greenhouse Gallery</h2>
           </div>
-          <p>These images illustrate possible product-use environments and are not presented as company-owned projects, customer case studies, or test results.</p>
+          <p>Explore twelve images covering production, rolled products, loading and dispatch, greenhouse installation, and winter weather applications.</p>
         </div>
-        <div class="application-grid">
-          <figure class="scene-card reveal">
-            <img src="assets/img/snow_image.jpg" alt="Greenhouses covered with black thermal quilts during heavy snow" width="1200" height="641" loading="lazy">
-            <figcaption><span>Winter Insulation</span><small>Product application imagery</small></figcaption>
-          </figure>
-          <figure class="scene-card reveal">
-            <img src="assets/img/rain_image.jpg" alt="Greenhouses covered with black thermal quilts in rainy conditions" width="1200" height="675" loading="lazy">
-            <figcaption><span>Rain &amp; Snow</span><small>Product application imagery</small></figcaption>
-          </figure>
+      </div>
+
+      <div class="gallery reveal" data-gallery>
+        <div class="shell gallery__toolbar">
+          <p class="gallery__hint">Auto play · Hover to pause · Drag or swipe · Click to enlarge</p>
+          <div class="gallery__controls">
+            <button class="gallery__arrow" type="button" data-gallery-prev aria-label="Previous image">←</button>
+            <span class="gallery__counter" aria-live="polite"><strong data-gallery-current>01</strong><span>/</span><span data-gallery-total>12</span></span>
+            <button class="gallery__arrow" type="button" data-gallery-next aria-label="Next image">→</button>
+          </div>
         </div>
+
+        <div class="gallery__viewport" data-gallery-viewport tabindex="0" aria-label="Horizontal product, loading and greenhouse gallery. Use the left and right arrow keys to browse.">
+          <div class="gallery__track">
+            <button class="gallery-card" type="button" data-gallery-item aria-label="Open large image: Production and rolling">
+              <img src="assets/img/gallery/01-production.webp" alt="Rolled greenhouse thermal quilts on the production line" width="1600" height="900" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>PRODUCT</small><strong>Production &amp; Rolling</strong></span><span class="gallery-card__number">01</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="Open large image: Black quilt inventory">
+              <img src="assets/img/gallery/02-black-rolls.webp" alt="Black rolled thermal quilts stacked in the warehouse" width="1448" height="1086" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>PRODUCT</small><strong>Black Quilt Inventory</strong></span><span class="gallery-card__number">02</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="Open large image: White quilt rolls">
+              <img src="assets/img/gallery/03-white-rolls.webp" alt="White rolled greenhouse thermal quilts in storage" width="1447" height="1087" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>PRODUCT</small><strong>White Quilt Rolls</strong></span><span class="gallery-card__number">03</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="Open large image: Loaded for dispatch">
+              <img src="assets/img/gallery/04-loading.webp" alt="Red truck fully loaded with rolled greenhouse quilts" width="1600" height="900" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>SHIPPING</small><strong>Loaded for Dispatch</strong></span><span class="gallery-card__number">04</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="Open large image: Trucks ready">
+              <img src="assets/img/gallery/05-fleet.webp" alt="Two loaded freight trucks ready for dispatch" width="1600" height="900" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>SHIPPING</small><strong>Trucks Ready</strong></span><span class="gallery-card__number">05</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="Open large image: Secured full load">
+              <img src="assets/img/gallery/06-secured-load.webp" alt="Rear view of a secured full load of rolled quilts" width="1600" height="900" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>SHIPPING</small><strong>Secured Full Load</strong></span><span class="gallery-card__number">06</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="Open large image: Product dispatch">
+              <img src="assets/img/gallery/07-dispatch.webp" alt="Freight truck carrying rolled finished products" width="1600" height="900" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>SHIPPING</small><strong>Product Dispatch</strong></span><span class="gallery-card__number">07</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="Open large image: Product and application overview">
+              <img src="assets/img/gallery/08-overview.webp" alt="Combined view of loading, storage, products, and greenhouse applications" width="1600" height="900" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>OVERVIEW</small><strong>Product &amp; Application Overview</strong></span><span class="gallery-card__number">08</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="Open large image: Greenhouse panorama">
+              <img src="assets/img/gallery/09-greenhouse-overview.webp" alt="Panoramic view of multiple covered greenhouses" width="1600" height="900" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>GREENHOUSE</small><strong>Greenhouse Panorama</strong></span><span class="gallery-card__number">09</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="Open large image: Greenhouse rows">
+              <img src="assets/img/gallery/10-greenhouse-row.webp" alt="Rows of greenhouses in an agricultural application setting" width="1600" height="900" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>GREENHOUSE</small><strong>Greenhouse Rows</strong></span><span class="gallery-card__number">10</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="Open large image: Winter insulation">
+              <img src="assets/img/snow_image.webp" alt="Greenhouse application in heavy winter snow" width="1200" height="641" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>WEATHER</small><strong>Winter Insulation</strong></span><span class="gallery-card__number">11</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="Open large image: Rain and snow conditions">
+              <img src="assets/img/rain_image.webp" alt="Covered greenhouse in rainy and snowy weather" width="1200" height="675" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>WEATHER</small><strong>Rain &amp; Snow Conditions</strong></span><span class="gallery-card__number">12</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="shell"><div class="gallery__progress" aria-hidden="true"><span data-gallery-progress></span></div></div>
+
+        <dialog class="gallery-lightbox" data-gallery-lightbox aria-label="Large gallery viewer">
+          <div class="gallery-lightbox__panel">
+            <button class="gallery-lightbox__close" type="button" data-gallery-close aria-label="Close large image">×</button>
+            <button class="gallery-lightbox__arrow gallery-lightbox__arrow--prev" type="button" data-lightbox-prev aria-label="Previous large image">←</button>
+            <figure class="gallery-lightbox__figure" data-lightbox-stage>
+              <img src="assets/img/gallery/01-production.webp" alt="" data-lightbox-image>
+              <figcaption><span data-lightbox-category>PRODUCT</span><strong data-lightbox-title>Production &amp; Rolling</strong></figcaption>
+            </figure>
+            <button class="gallery-lightbox__arrow gallery-lightbox__arrow--next" type="button" data-lightbox-next aria-label="Next large image">→</button>
+            <span class="gallery-lightbox__counter"><strong data-lightbox-current>01</strong> / <span data-lightbox-total>12</span></span>
+          </div>
+        </dialog>
       </div>
     </section>
 
     <section class="shipping section-pad" id="shipping" aria-labelledby="shipping-title">
-      <img class="shipping__image" src="assets/img/load1.png" alt="Semi-trailer loaded with rolled greenhouse thermal quilts for freight" width="1680" height="945" loading="lazy">
+      <img class="shipping__image" src="assets/img/load1.webp" alt="Semi-trailer loaded with rolled greenhouse thermal quilts for freight" width="1680" height="945" loading="lazy">
       <div class="shipping__shade"></div>
       <div class="shell shipping__grid">
         <div class="shipping__copy reveal">
@@ -270,7 +339,10 @@
     </div>
     <div class="shell footer__bottom">
       <span>© <span data-year></span> Xinyuan Dingfeng Agricultural Technology Co., Ltd.</span>
-      <span>Product details are subject to final order confirmation.</span>
+      <span class="footer__legal">
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">鲁ICP备2026046904号</a>
+        <span>Product details are subject to final order confirmation.</span>
+      </span>
     </div>
   </footer>
 

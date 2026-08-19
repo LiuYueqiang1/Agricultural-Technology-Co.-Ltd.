@@ -14,7 +14,7 @@
   <link rel="alternate" hreflang="en" href="en.html">
   <link rel="alternate" hreflang="x-default" href="index.html">
   <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
-  <link rel="preload" href="assets/img/First_photo2_clean.png" as="image" type="image/png" fetchpriority="high">
+  <link rel="preload" href="assets/img/First_photo2_clean.webp" as="image" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/style.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -70,7 +70,7 @@
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <img class="hero__image" src="assets/img/First_photo2_clean.png" alt="冬季温室覆盖黑色保温棉被的产品应用场景" width="1829" height="860">
+      <img class="hero__image" src="assets/img/First_photo2_clean.webp" alt="冬季温室覆盖黑色保温棉被的产品应用场景" width="1829" height="860">
       <div class="hero__shade"></div>
       <div class="shell hero__inner">
         <div class="hero__copy reveal">
@@ -108,7 +108,7 @@
     <section class="factory section-pad" id="factory" aria-labelledby="factory-title">
       <div class="shell factory__grid">
         <div class="factory__media reveal">
-          <img src="assets/img/factory.jpg" alt="大棚保温棉被生产工序参考画面" width="1200" height="675" loading="lazy">
+          <img src="assets/img/factory.webp" alt="大棚保温棉被生产工序参考画面" width="1200" height="675" loading="lazy">
           <p class="media-note">保温棉被生产工序参考画面</p>
         </div>
         <div class="factory__body reveal">
@@ -152,7 +152,7 @@
           </ul>
         </div>
         <figure class="product__media reveal">
-          <img src="assets/img/product1.jpg" alt="黑色农业大棚保温棉被成卷摆放的产品展示场景" width="1200" height="675" loading="lazy">
+          <img src="assets/img/product1.webp" alt="黑色农业大棚保温棉被成卷摆放的产品展示场景" width="1200" height="675" loading="lazy">
           <figcaption>成卷产品展示场景 · 具体库存以实时生产安排为准</figcaption>
         </figure>
       </div>
@@ -181,26 +181,95 @@
       <div class="shell">
         <div class="section-heading reveal">
           <div>
-            <p class="eyebrow"><span></span>APPLICATION</p>
-            <h2 id="application-title">应对北方温室使用环境</h2>
+            <p class="eyebrow"><span></span>GALLERY</p>
+            <h2 id="application-title">产品、装车与温室图册</h2>
           </div>
-          <p>以下画面用于说明产品可能面对的应用环境，不作为企业自有项目、客户案例或检测结果。</p>
+          <p>从生产成卷、仓储装车到温室覆盖与雨雪环境，通过十二张画面直观了解产品形态、交付方式与使用场景。</p>
         </div>
-        <div class="application-grid">
-          <figure class="scene-card reveal">
-            <img src="assets/img/snow_image.jpg" alt="大雪天气中温室覆盖黑色保温棉被的应用场景" width="1200" height="641" loading="lazy">
-            <figcaption><span>冬季保温</span><small>产品应用场景展示</small></figcaption>
-          </figure>
-          <figure class="scene-card reveal">
-            <img src="assets/img/rain_image.jpg" alt="降雨天气中温室覆盖黑色保温棉被的应用场景" width="1200" height="675" loading="lazy">
-            <figcaption><span>雨雪环境</span><small>产品应用场景展示</small></figcaption>
-          </figure>
+      </div>
+
+      <div class="gallery reveal" data-gallery>
+        <div class="shell gallery__toolbar">
+          <p class="gallery__hint">自动播放 · 悬停暂停 · 拖动浏览 · 点击查看大图</p>
+          <div class="gallery__controls">
+            <button class="gallery__arrow" type="button" data-gallery-prev aria-label="上一张图片">←</button>
+            <span class="gallery__counter" aria-live="polite"><strong data-gallery-current>01</strong><span>/</span><span data-gallery-total>12</span></span>
+            <button class="gallery__arrow" type="button" data-gallery-next aria-label="下一张图片">→</button>
+          </div>
         </div>
+
+        <div class="gallery__viewport" data-gallery-viewport tabindex="0" aria-label="产品、装车与温室横向图册，可使用左右方向键浏览">
+          <div class="gallery__track">
+            <button class="gallery-card" type="button" data-gallery-item aria-label="打开大图：生产与成卷">
+              <img src="assets/img/gallery/01-production.webp" alt="大棚保温棉被生产线上的成卷产品" width="1600" height="900" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>PRODUCT</small><strong>生产与成卷</strong></span><span class="gallery-card__number">01</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="打开大图：黑色成品库存">
+              <img src="assets/img/gallery/02-black-rolls.webp" alt="仓库内整齐堆放的黑色成卷保温棉被" width="1448" height="1086" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>PRODUCT</small><strong>黑色成品库存</strong></span><span class="gallery-card__number">02</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="打开大图：白色成品成卷">
+              <img src="assets/img/gallery/03-white-rolls.webp" alt="仓库内码放的白色成卷大棚保温棉被" width="1447" height="1087" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>PRODUCT</small><strong>白色成品成卷</strong></span><span class="gallery-card__number">03</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="打开大图：装车待发">
+              <img src="assets/img/gallery/04-loading.webp" alt="装满成卷大棚保温棉被的红色货车" width="1600" height="900" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>SHIPPING</small><strong>装车待发</strong></span><span class="gallery-card__number">04</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="打开大图：车辆整装">
+              <img src="assets/img/gallery/05-fleet.webp" alt="两辆完成装载等待发运的货车" width="1600" height="900" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>SHIPPING</small><strong>车辆整装</strong></span><span class="gallery-card__number">05</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="打开大图：满载固定">
+              <img src="assets/img/gallery/06-secured-load.webp" alt="从车尾查看已经固定的成卷保温棉被" width="1600" height="900" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>SHIPPING</small><strong>满载固定</strong></span><span class="gallery-card__number">06</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="打开大图：成品发运">
+              <img src="assets/img/gallery/07-dispatch.webp" alt="装载成卷产品准备发运的货车" width="1600" height="900" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>SHIPPING</small><strong>成品发运</strong></span><span class="gallery-card__number">07</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="打开大图：产品与应用总览">
+              <img src="assets/img/gallery/08-overview.webp" alt="产品装车、仓储和温室应用组合画面" width="1600" height="900" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>OVERVIEW</small><strong>产品与应用总览</strong></span><span class="gallery-card__number">08</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="打开大图：温室覆盖全景">
+              <img src="assets/img/gallery/09-greenhouse-overview.webp" alt="多座温室整齐排列的覆盖应用全景" width="1600" height="900" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>GREENHOUSE</small><strong>温室覆盖全景</strong></span><span class="gallery-card__number">09</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="打开大图：温室成排应用">
+              <img src="assets/img/gallery/10-greenhouse-row.webp" alt="成排温室覆盖产品的应用画面" width="1600" height="900" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>GREENHOUSE</small><strong>温室成排应用</strong></span><span class="gallery-card__number">10</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="打开大图：冬季保温">
+              <img src="assets/img/snow_image.webp" alt="大雪天气中的温室冬季应用场景" width="1200" height="641" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>WEATHER</small><strong>冬季保温</strong></span><span class="gallery-card__number">11</span>
+            </button>
+            <button class="gallery-card" type="button" data-gallery-item aria-label="打开大图：雨雪环境">
+              <img src="assets/img/rain_image.webp" alt="阴雨天气中的温室覆盖应用场景" width="1200" height="675" loading="lazy" decoding="async" draggable="false">
+              <span class="gallery-card__shade"></span><span class="gallery-card__meta"><small>WEATHER</small><strong>雨雪环境</strong></span><span class="gallery-card__number">12</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="shell"><div class="gallery__progress" aria-hidden="true"><span data-gallery-progress></span></div></div>
+
+        <dialog class="gallery-lightbox" data-gallery-lightbox aria-label="产品图册大图查看">
+          <div class="gallery-lightbox__panel">
+            <button class="gallery-lightbox__close" type="button" data-gallery-close aria-label="关闭大图">×</button>
+            <button class="gallery-lightbox__arrow gallery-lightbox__arrow--prev" type="button" data-lightbox-prev aria-label="上一张大图">←</button>
+            <figure class="gallery-lightbox__figure" data-lightbox-stage>
+              <img src="assets/img/gallery/01-production.webp" alt="" data-lightbox-image>
+              <figcaption><span data-lightbox-category>PRODUCT</span><strong data-lightbox-title>生产与成卷</strong></figcaption>
+            </figure>
+            <button class="gallery-lightbox__arrow gallery-lightbox__arrow--next" type="button" data-lightbox-next aria-label="下一张大图">→</button>
+            <span class="gallery-lightbox__counter"><strong data-lightbox-current>01</strong> / <span data-lightbox-total>12</span></span>
+          </div>
+        </dialog>
       </div>
     </section>
 
     <section class="shipping section-pad" id="shipping" aria-labelledby="shipping-title">
-      <img class="shipping__image" src="assets/img/load1.png" alt="满载成卷大棚保温棉被的半挂车准备发运" width="1680" height="945" loading="lazy">
+      <img class="shipping__image" src="assets/img/load1.webp" alt="满载成卷大棚保温棉被的半挂车准备发运" width="1680" height="945" loading="lazy">
       <div class="shipping__shade"></div>
       <div class="shell shipping__grid">
         <div class="shipping__copy reveal">
@@ -263,7 +332,10 @@
     </div>
     <div class="shell footer__bottom">
       <span>© <span data-year></span> 鑫源鼎丰农业科技有限公司</span>
-      <span>网站内容以实际沟通与订单确认为准</span>
+      <span class="footer__legal">
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">鲁ICP备2026046904号</a>
+        <span>网站内容以实际沟通与订单确认为准</span>
+      </span>
     </div>
   </footer>
 

@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let autoPlayTimer = 0;
     let wheelResumeTimer = 0;
     let dragState = null;
+    let touchState = null;
     let isLooping = false;
     let suppressClick = false;
     let lastFocused = null;
@@ -308,7 +309,22 @@ document.addEventListener("DOMContentLoaded", () => {
       viewport.classList.add("is-dragging");
     };
 
+    const settleReleasedDrag = (state, cancelled = false, clickSuppressDuration = 0) => {
+      if (!state || state.axis !== "horizontal" || !state.moved) return false;
+      suppressClick = true;
+      window.setTimeout(() => { suppressClick = false; }, clickSuppressDuration);
+      const releaseAge = performance.now() - state.lastTime;
+      const releaseVelocity = !cancelled && releaseAge < 90 ? state.velocity : 0;
+      const projectedScrollLeft = viewport.scrollLeft - releaseVelocity * 420;
+      const speedRatio = Math.min(Math.abs(releaseVelocity) / 2, 1);
+      const settleDuration = Math.round(950 + 2650 * (1 - Math.pow(speedRatio, 1.8)));
+      const target = closestItemTarget(projectedScrollLeft);
+      settleToTarget(target, settleDuration, () => resumeAutoPlay("pointer"));
+      return true;
+    };
+
     viewport.addEventListener("pointerdown", (event) => {
+      if (event.pointerType === "touch") return;
       if (event.pointerType === "mouse" && event.button !== 0) return;
       pauseAutoPlay("pointer");
       cancelScrollAnimation();
@@ -334,6 +350,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     viewport.addEventListener("pointermove", (event) => {
+      if (event.pointerType === "touch") return;
       if (!dragState || dragState.pointerId !== event.pointerId) return;
       const now = performance.now();
       const totalX = event.clientX - dragState.startX;
@@ -370,26 +387,91 @@ document.addEventListener("DOMContentLoaded", () => {
       if (dragState && dragState.pointerId === event.pointerId) {
         flushDragMovement();
         releasePointer(event.pointerId);
-        if (dragState.axis === "horizontal" && dragState.moved) {
-          suppressClick = true;
-          window.setTimeout(() => { suppressClick = false; }, 0);
-          const releaseAge = performance.now() - dragState.lastTime;
-          const releaseVelocity = !cancelled && releaseAge < 90 ? dragState.velocity : 0;
-          const projectedScrollLeft = viewport.scrollLeft - releaseVelocity * 420;
-          const speedRatio = Math.min(Math.abs(releaseVelocity) / 2, 1);
-          const settleDuration = Math.round(950 + 2650 * (1 - Math.pow(speedRatio, 1.8)));
-          const target = closestItemTarget(projectedScrollLeft);
-          resumeAfterSnap = true;
-          settleToTarget(target, settleDuration, () => resumeAutoPlay("pointer"));
-        }
+        resumeAfterSnap = settleReleasedDrag(dragState, cancelled);
         viewport.classList.remove("is-dragging");
         dragState = null;
       }
       if (!resumeAfterSnap) resumeAutoPlay("pointer");
     };
 
-    viewport.addEventListener("pointerup", finishDrag);
-    viewport.addEventListener("pointercancel", (event) => finishDrag(event, true));
+    viewport.addEventListener("pointerup", (event) => {
+      if (event.pointerType !== "touch") finishDrag(event);
+    });
+    viewport.addEventListener("pointercancel", (event) => {
+      if (event.pointerType !== "touch") finishDrag(event, true);
+    });
+
+    const findTouch = (touchList, identifier) => Array.from(touchList).find((touch) => touch.identifier === identifier);
+
+    viewport.addEventListener("touchstart", (event) => {
+      if (event.touches.length !== 1) return;
+      const touch = event.touches[0];
+      pauseAutoPlay("pointer");
+      cancelScrollAnimation();
+      isLooping = false;
+      pendingDragDelta = 0;
+      touchState = {
+        identifier: touch.identifier,
+        startX: touch.clientX,
+        startY: touch.clientY,
+        lastX: touch.clientX,
+        lastY: touch.clientY,
+        lastTime: performance.now(),
+        velocity: 0,
+        moved: false,
+        axis: null
+      };
+    }, { passive: true });
+
+    viewport.addEventListener("touchmove", (event) => {
+      if (!touchState) return;
+      const touch = findTouch(event.touches, touchState.identifier);
+      if (!touch) return;
+      const totalX = touch.clientX - touchState.startX;
+      const totalY = touch.clientY - touchState.startY;
+      const absX = Math.abs(totalX);
+      const absY = Math.abs(totalY);
+
+      if (!touchState.axis) {
+        if (Math.max(absX, absY) < 10) return;
+        if (absX > absY * 1.15) {
+          touchState.axis = "horizontal";
+          viewport.classList.add("is-dragging");
+        } else {
+          touchState.axis = "vertical";
+          return;
+        }
+      }
+
+      if (touchState.axis !== "horizontal") return;
+      const now = performance.now();
+      const deltaX = touch.clientX - touchState.lastX;
+      const elapsed = Math.max(now - touchState.lastTime, 1);
+      const instantVelocity = deltaX / elapsed;
+      touchState.velocity = touchState.velocity * 0.7 + instantVelocity * 0.3;
+      touchState.lastX = touch.clientX;
+      touchState.lastY = touch.clientY;
+      touchState.lastTime = now;
+      if (absX > 10) touchState.moved = true;
+      if (touchState.moved) {
+        event.preventDefault();
+        queueDragMovement(deltaX);
+      }
+    }, { passive: false });
+
+    const finishTouchDrag = (cancelled = false) => {
+      if (!touchState) return;
+      flushDragMovement();
+      const resumeAfterSnap = settleReleasedDrag(touchState, cancelled, 450);
+      viewport.classList.remove("is-dragging");
+      touchState = null;
+      if (!resumeAfterSnap) resumeAutoPlay("pointer");
+    };
+
+    viewport.addEventListener("touchend", (event) => {
+      if (touchState && findTouch(event.changedTouches, touchState.identifier)) finishTouchDrag();
+    });
+    viewport.addEventListener("touchcancel", () => finishTouchDrag(true));
     viewport.addEventListener("wheel", () => {
       cancelScrollAnimation();
       isLooping = false;

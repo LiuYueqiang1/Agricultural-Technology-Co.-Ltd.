@@ -85,6 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let lightboxIndex = 0;
     let scrollFrame = 0;
     let scrollAnimationFrame = 0;
+    let dragMoveFrame = 0;
+    let pendingDragDelta = 0;
     let autoPlayTimer = 0;
     let wheelResumeTimer = 0;
     let dragState = null;
@@ -266,48 +268,113 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!gallery.contains(event.relatedTarget)) resumeAutoPlay("focus");
     });
 
+    const capturePointer = (pointerId) => {
+      if (typeof viewport.setPointerCapture !== "function") return false;
+      try {
+        viewport.setPointerCapture(pointerId);
+        return true;
+      } catch {
+        return false;
+      }
+    };
+
+    const releasePointer = (pointerId) => {
+      if (typeof viewport.hasPointerCapture !== "function" || typeof viewport.releasePointerCapture !== "function") return;
+      try {
+        if (viewport.hasPointerCapture(pointerId)) viewport.releasePointerCapture(pointerId);
+      } catch {
+        // Some mobile browsers release capture themselves when native scrolling wins.
+      }
+    };
+
+    const flushDragMovement = () => {
+      if (dragMoveFrame) cancelAnimationFrame(dragMoveFrame);
+      dragMoveFrame = 0;
+      if (!pendingDragDelta) return;
+      viewport.scrollLeft -= pendingDragDelta;
+      pendingDragDelta = 0;
+    };
+
+    const queueDragMovement = (deltaX) => {
+      pendingDragDelta += deltaX;
+      if (dragMoveFrame) return;
+      dragMoveFrame = requestAnimationFrame(flushDragMovement);
+    };
+
+    const beginHorizontalDrag = () => {
+      if (!dragState || dragState.axis === "horizontal") return;
+      dragState.axis = "horizontal";
+      dragState.captured = capturePointer(dragState.pointerId);
+      viewport.classList.add("is-dragging");
+    };
+
     viewport.addEventListener("pointerdown", (event) => {
+      if (event.pointerType === "mouse" && event.button !== 0) return;
       pauseAutoPlay("pointer");
       cancelScrollAnimation();
       isLooping = false;
-      if (event.pointerType === "mouse" && event.button !== 0) return;
       dragState = {
         pointerId: event.pointerId,
+        pointerType: event.pointerType,
         startX: event.clientX,
+        startY: event.clientY,
         lastX: event.clientX,
+        lastY: event.clientY,
         lastTime: performance.now(),
         velocity: 0,
-        moved: false
+        moved: false,
+        axis: event.pointerType === "mouse" ? "horizontal" : null,
+        captured: false
       };
-      viewport.setPointerCapture(event.pointerId);
-      viewport.classList.add("is-dragging");
+      pendingDragDelta = 0;
+      if (dragState.axis === "horizontal") {
+        dragState.captured = capturePointer(event.pointerId);
+        viewport.classList.add("is-dragging");
+      }
     });
 
     viewport.addEventListener("pointermove", (event) => {
       if (!dragState || dragState.pointerId !== event.pointerId) return;
       const now = performance.now();
+      const totalX = event.clientX - dragState.startX;
+      const totalY = event.clientY - dragState.startY;
+      const absX = Math.abs(totalX);
+      const absY = Math.abs(totalY);
+
+      if (!dragState.axis) {
+        if (Math.max(absX, absY) < 10) return;
+        if (absX > absY * 1.15) beginHorizontalDrag();
+        else {
+          dragState.axis = "vertical";
+          return;
+        }
+      }
+
+      if (dragState.axis !== "horizontal") return;
       const deltaX = event.clientX - dragState.lastX;
       const elapsed = Math.max(now - dragState.lastTime, 1);
       const instantVelocity = deltaX / elapsed;
       dragState.velocity = dragState.velocity * 0.7 + instantVelocity * 0.3;
       dragState.lastX = event.clientX;
+      dragState.lastY = event.clientY;
       dragState.lastTime = now;
-      if (Math.abs(event.clientX - dragState.startX) > 6) dragState.moved = true;
+      if (absX > 10) dragState.moved = true;
       if (dragState.moved) {
-        viewport.scrollLeft -= deltaX;
+        queueDragMovement(deltaX);
         event.preventDefault();
       }
     });
 
-    const finishDrag = (event) => {
+    const finishDrag = (event, cancelled = false) => {
       let resumeAfterSnap = false;
       if (dragState && dragState.pointerId === event.pointerId) {
-        if (viewport.hasPointerCapture(event.pointerId)) viewport.releasePointerCapture(event.pointerId);
-        if (dragState.moved) {
+        flushDragMovement();
+        releasePointer(event.pointerId);
+        if (dragState.axis === "horizontal" && dragState.moved) {
           suppressClick = true;
           window.setTimeout(() => { suppressClick = false; }, 0);
           const releaseAge = performance.now() - dragState.lastTime;
-          const releaseVelocity = releaseAge < 90 ? dragState.velocity : 0;
+          const releaseVelocity = !cancelled && releaseAge < 90 ? dragState.velocity : 0;
           const projectedScrollLeft = viewport.scrollLeft - releaseVelocity * 420;
           const speedRatio = Math.min(Math.abs(releaseVelocity) / 2, 1);
           const settleDuration = Math.round(950 + 2650 * (1 - Math.pow(speedRatio, 1.8)));
@@ -322,7 +389,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     viewport.addEventListener("pointerup", finishDrag);
-    viewport.addEventListener("pointercancel", finishDrag);
+    viewport.addEventListener("pointercancel", (event) => finishDrag(event, true));
     viewport.addEventListener("wheel", () => {
       cancelScrollAnimation();
       isLooping = false;

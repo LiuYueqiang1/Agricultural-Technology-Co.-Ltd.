@@ -254,7 +254,8 @@ figure, h1, h2, h3, p { margin-top: 0; }
 .gallery__viewport {
   width: 100%; padding: 0 max(16px, calc((100vw - var(--shell)) / 2)) 28px;
   overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: max(16px, calc((100vw - var(--shell)) / 2));
-  scrollbar-width: none; cursor: grab; touch-action: pan-y; -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; cursor: grab; touch-action: pan-y pinch-zoom; -webkit-overflow-scrolling: touch;
+  -webkit-user-select: none; user-select: none;
 }
 .gallery__viewport::-webkit-scrollbar { display: none; }
 .gallery__viewport.is-dragging,

@@ -372,6 +372,8 @@ body.gallery-open { overflow: hidden; }
 .footer__legal { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 18px; }
 .footer__legal a { color: rgba(255, 255, 255, .78); }
 .footer__legal a:hover { color: var(--white); }
+.footer__legal .beian-link { display: inline-flex; gap: 5px; align-items: center; }
+.beian-link img { width: 20px; height: 20px; flex: 0 0 20px; object-fit: contain; }
 .call-fab { display: none; }
 
 .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
